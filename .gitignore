@@ -30,3 +30,4 @@ node_modules
 
 # Sentry Config File
 .env.sentry-build-plugin
+*storybook.log
