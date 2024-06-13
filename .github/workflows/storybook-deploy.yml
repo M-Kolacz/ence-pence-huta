@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - feat/add-storybook
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
