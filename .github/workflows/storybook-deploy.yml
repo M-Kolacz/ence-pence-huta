@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - feat/add-storybook
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -31,7 +30,7 @@ jobs:
       - name: 🏗️ Build Storybook
         run: npm run build-storybook
 
-      - name: Deploy 🚀
+      - name: Publish Storybook 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: storybook-static
