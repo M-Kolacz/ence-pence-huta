@@ -48,11 +48,14 @@ import { makeTimings, time } from './utils/timing.server.ts'
 import { getToast } from './utils/toast.server.ts'
 import { useOptionalUser, useUser } from './utils/user.ts'
 import { Header } from './components/header.tsx'
+import fontStyleSheetUrl from './styles/font.css?url'
 
 export const links: LinksFunction = () => {
 	return [
 		// Preload svg sprite as a resource to avoid render blocking
 		{ rel: 'preload', href: iconsHref, as: 'image' },
+		{ rel: 'preload', href: fontStyleSheetUrl, as: 'style' },
+
 		// Preload CSS as a resource to avoid render blocking
 		{ rel: 'mask-icon', href: '/favicons/mask-icon.svg' },
 		{
@@ -68,6 +71,7 @@ export const links: LinksFunction = () => {
 		} as const, // necessary to make typescript happy
 		//These should match the css preloads above to avoid css as render blocking resource
 		{ rel: 'icon', type: 'image/svg+xml', href: '/favicons/favicon.svg' },
+		{ rel: 'stylesheet', href: fontStyleSheetUrl },
 		{ rel: 'stylesheet', href: tailwindStyleSheetUrl },
 	].filter(Boolean)
 }

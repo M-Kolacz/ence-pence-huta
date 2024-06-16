@@ -4,10 +4,8 @@
 
 @layer base {
 	:root {
-		/* --font-sans: here if you have one */
-		/* --font-mono: here if you got it... */
-
-		/* prefixed with foreground because it should look good on the background */
+		--font-sans: 'Roboto';
+		--font-heading: 'Roboto Condensed';
 		--foreground-destructive: 345 82.7% 40.8%;
 
 		--background: 0 0% 100%;

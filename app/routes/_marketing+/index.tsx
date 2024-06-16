@@ -50,15 +50,17 @@ export default function Index() {
 					</a>
 					<h1
 						data-heading
-						className="mt-8 animate-slide-top text-4xl font-medium text-foreground [animation-delay:0.3s] [animation-fill-mode:backwards] md:text-5xl xl:mt-4 xl:animate-slide-left xl:text-6xl xl:[animation-delay:0.8s] xl:[animation-fill-mode:backwards]"
+						className="font-heading mt-8 animate-slide-top text-4xl font-medium text-foreground [animation-delay:0.3s] [animation-fill-mode:backwards] md:text-5xl xl:mt-4 xl:animate-slide-left xl:text-6xl xl:[animation-delay:0.8s] xl:[animation-fill-mode:backwards]"
 					>
-						<a href="https://www.epicweb.dev/stack">The Epic Stack</a>
+						<a href="https://www.epicweb.dev/stack" className="font-bold">
+							The Epic Stack
+						</a>
 					</h1>
 					<p
 						data-paragraph
 						className="mt-6 animate-slide-top text-xl/7 text-muted-foreground [animation-delay:0.8s] [animation-fill-mode:backwards] xl:mt-8 xl:animate-slide-left xl:text-xl/6 xl:leading-10 xl:[animation-delay:1s] xl:[animation-fill-mode:backwards]"
 					>
-						Check the{' '}
+						Check the Kebałek żółć{' '}
 						<a
 							className="underline hover:no-underline"
 							href="https://github.com/epicweb-dev/epic-stack/blob/main/docs/getting-started.md"
