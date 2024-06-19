@@ -11,7 +11,7 @@ const sizeClassName = {
 	xs: 'w-3 h-3',
 	sm: 'w-4 h-4',
 	md: 'w-5 h-5',
-	lg: 'w-6 h-6',
+	lg: 'w-7 h-7',
 	xl: 'w-8 h-8',
 } as const
 
@@ -70,7 +70,7 @@ export function Icon({
 			{...props}
 			className={cn(sizeClassName[size], 'inline self-center', className)}
 		>
-			{title ? <title>{title}</title> : null}
+			{title ? <title>{title || name}</title> : null}
 			<use href={`${href}#${name}`} />
 		</svg>
 	)

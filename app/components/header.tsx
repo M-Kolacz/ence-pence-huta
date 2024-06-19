@@ -1,7 +1,8 @@
-import Logo from './Logo.svg'
 import { Button } from '#app/components/ui/button.tsx'
 import { Icon } from '#app/components/ui/icon.tsx'
+import Logo from './Logo.svg'
 import { NavigationLink } from './navigation-link'
+import { IconButton } from './ui/icon-button'
 
 const navigationLinks = [
 	{ to: '/', children: 'Strona główna' },
@@ -18,9 +19,9 @@ export const Header = () => {
 				className="md:h-[121px] md:w-[150px]"
 			/>
 
-			<Button variant={'outline'} size="icon" className="md:hidden">
+			<IconButton className="md:hidden">
 				<Icon name="menu" size="xl" />
-			</Button>
+			</IconButton>
 
 			<nav className="hidden list-none gap-6 space-x-8 md:flex">
 				{navigationLinks.map(link => (
