@@ -1,7 +1,6 @@
+import { type NavLinkProps, NavLink } from '@remix-run/react'
 import { cva } from 'class-variance-authority'
 import { cn } from '#app/utils/misc.tsx'
-import { NavLinkProps, NavLink } from '@remix-run/react'
-import { Button } from './ui/button'
 
 export const navigationLinkVariants = cva(
 	'font-sans text-base font-bold text-neutral-500 hover:text-blue-950',

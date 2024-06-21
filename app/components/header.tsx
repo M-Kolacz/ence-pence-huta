@@ -1,7 +1,7 @@
 import { Button } from '#app/components/ui/button.tsx'
 import { Icon } from '#app/components/ui/icon.tsx'
 import Logo from './Logo.svg'
-import { NavigationLink } from './navigation-link'
+import { NavigationLink } from './ui/navigation-link'
 import { IconButton } from './ui/icon-button'
 
 const navigationLinks = [
