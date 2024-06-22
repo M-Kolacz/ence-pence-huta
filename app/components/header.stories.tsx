@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { setViewport } from '#app/utils/chromatic.ts'
+import { setViewport } from '#app/utils/storybook.ts'
 import { Header } from './header.tsx'
 
 const meta = {

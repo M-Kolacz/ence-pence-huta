@@ -39,6 +39,5 @@ export const avaiableModes = {
 		Mobile: allModes['Mobile'],
 		Tablet: allModes['Tablet'],
 		Desktop: allModes['Desktop'],
-		WideDesktop: allModes['WideDesktop'],
 	},
 } as const
