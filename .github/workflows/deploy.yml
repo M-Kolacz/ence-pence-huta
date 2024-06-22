@@ -135,6 +135,34 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
+  chromatic:
+    name: 🚀 Deploy to Chromatic
+    runs-on: ubuntu-22.04
+    needs: [lint, typecheck, vitest, playwright]
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 😀 Build Icons
+        run: npm run build:icons
+
+      - name: 🚀 Deploy to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: build:storybook
+
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-22.04
