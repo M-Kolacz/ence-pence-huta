@@ -1,0 +1,3 @@
+import{j as s}from"./jsx-runtime-BZf_YgVj.js";import{d as a}from"./storybook-DFGEZ4OP.js";import{I as n,a as m}from"./icon-button-BtwmNYOH.js";import"./index-CEThVCg_.js";import"./misc-6wHo9vsf.js";const u={title:"IconButton",component:n,parameters:{layout:"centered"},args:{children:s.jsx(m,{name:"cereal",size:"xl"})},argTypes:a(["children"]),tags:["autodocs"]},o={args:{}};var r,e,t;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {}
+}`,...(t=(e=o.parameters)==null?void 0:e.docs)==null?void 0:t.source}}};const g=["Component"];export{o as Component,g as __namedExportsOrder,u as default};
