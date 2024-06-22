@@ -1,4 +1,5 @@
-import type { Preview } from '@storybook/react'
+import { type Preview } from '@storybook/react'
+import { withRouter } from 'storybook-addon-remix-react-router'
 import '../app/styles/tailwind.css'
 
 const preview: Preview = {
@@ -10,6 +11,7 @@ const preview: Preview = {
 			},
 		},
 	},
+	decorators: [withRouter],
 }
 
 export default preview
