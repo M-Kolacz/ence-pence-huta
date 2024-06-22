@@ -191,6 +191,9 @@ jobs:
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 
+      - name: 😀 Build Icons
+        run: npm run build:icons
+
       - name: 🚀 Deploy to Chromatic
         uses: chromaui/action@latest
         with:
