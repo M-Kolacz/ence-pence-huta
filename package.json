@@ -30,7 +30,8 @@
     "typecheck": "tsc",
     "validate": "run-p \"test -- --run\" lint typecheck test:e2e:run",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_c8a6558bbc425fd"
   },
   "prettier": "@epic-web/config/prettier",
   "eslintIgnore": [
@@ -146,6 +147,7 @@
     "@vitejs/plugin-react": "^4.3.0",
     "@vitest/coverage-v8": "^1.6.0",
     "autoprefixer": "^10.4.19",
+    "chromatic": "^11.5.4",
     "enforce-unique": "^1.3.0",
     "esbuild": "^0.21.4",
     "eslint": "^9.4.0",
@@ -177,5 +179,6 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "version": ""
 }
