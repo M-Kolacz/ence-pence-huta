@@ -1,12 +1,15 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { setViewport } from '#app/utils/storybook.ts'
+import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Header } from './header.tsx'
 
 const meta = {
-	title: 'Header',
+	title: '🦠 Organisms/Header',
 	component: Header,
 	parameters: {
 		layout: 'fullscreen',
+		...setDesignPreview(
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=100-225&t=SgllQF4sLHtxY4V0-4',
+		),
 	},
 	args: {},
 	argTypes: {},

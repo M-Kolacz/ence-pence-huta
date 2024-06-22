@@ -1,14 +1,16 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { disableControls } from '#app/utils/storybook.ts'
+import { disableControls, setDesignPreview } from '#app/utils/storybook.ts'
 import { IconButton } from './icon-button.tsx'
 import { Icon } from './icon.tsx'
 
 const meta = {
-	title: 'IconButton',
+	title: '⚛️ Atoms/IconButton',
 	component: IconButton,
-
 	parameters: {
 		layout: 'centered',
+		...setDesignPreview(
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-22&t=SgllQF4sLHtxY4V0-4',
+		),
 	},
 	args: { children: <Icon name="cereal" size="xl" /> },
 	argTypes: disableControls(['children']),

@@ -15,6 +15,11 @@ const preview: Preview = {
 			viewports: MY_VIEWPORTS,
 			defaultViewport: MY_VIEWPORTS.Desktop.name,
 		},
+		options: {
+			storySort: {
+				order: ['⚛️ Atoms', 'Molecules', '🦠 Organisms', 'Templates', 'Pages'],
+			},
+		},
 	},
 	decorators: [withRouter],
 }

@@ -29,3 +29,10 @@ export const setViewport = (device: keyof typeof MY_VIEWPORTS) => ({
 		},
 	},
 })
+
+export const setDesignPreview = (url: string) => ({
+	design: {
+		type: 'figma',
+		url,
+	},
+})
