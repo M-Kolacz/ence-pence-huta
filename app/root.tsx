@@ -17,9 +17,7 @@ import { withSentry } from '@sentry/remix'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
 import { href as iconsHref } from './components/atoms/icon/icon.tsx'
 import { Header } from './components/organisms'
-import { EpicProgress } from './components/progress-bar.tsx'
 import { GeneralErrorBoundary } from './components/templates'
-import { useToast } from './components/toaster.tsx'
 import fontStyleSheetUrl from './styles/font.css?url'
 import tailwindStyleSheetUrl from './styles/tailwind.css?url'
 import { ClientHintCheck, getHints } from './utils/client-hints.tsx'
@@ -144,7 +142,6 @@ function App() {
 	const data = useLoaderData<typeof loader>()
 	const nonce = useNonce()
 	const allowIndexing = data.ENV.ALLOW_INDEXING !== 'false'
-	useToast(data.toast)
 
 	return (
 		<Document nonce={nonce} allowIndexing={allowIndexing} env={data.ENV}>
@@ -155,8 +152,6 @@ function App() {
 					<Outlet />
 				</div>
 			</div>
-
-			<EpicProgress />
 		</Document>
 	)
 }
