@@ -1,28 +1,32 @@
-// import { render } from '@testing-library/react'
-// import { axe } from 'jest-axe'
-// import { getStoriesTestCases } from '#app/utils/storybook.ts'
-// import * as HeaderStories from './header.stories.tsx'
+import { createRemixStub } from '@remix-run/testing'
+import { render } from '@testing-library/react'
+import { axe } from 'jest-axe'
+import { getStoriesTestCases } from '#app/utils/storybook.ts'
+import * as HeaderStories from './header.stories.tsx'
 
-// const testCases = getStoriesTestCases(HeaderStories)
+const testCases = getStoriesTestCases(HeaderStories)
 
-// describe('Header component', () => {
-// 	test.each(testCases)(
-// 		'snapshot test of %s story',
-// 		async (_storyName, Story) => {
-// 			if (!Story) throw new Error('Missing story to test!')
+describe('Header component', () => {
+	test.each(testCases)(
+		'snapshot test of %s story',
+		async (_storyName, Story) => {
+			if (!Story) throw new Error('Missing story to test!')
 
-// 			const { container } = render(<Story />)
-// 			expect(container).toMatchSnapshot()
-// 		},
-// 	)
+			const RemixStub = createRemixStub([{ path: '/', Component: Story }])
+			const { container } = render(<RemixStub />)
 
-// 	test.each(testCases)('a11y test of %s story', async (_storyName, Story) => {
-// 		if (!Story) throw new Error('Missing story to test!')
+			expect(container).toMatchSnapshot()
+		},
+	)
 
-// 		const { container } = render(<Story />)
+	test.each(testCases)('a11y test of %s story', async (_storyName, Story) => {
+		if (!Story) throw new Error('Missing story to test!')
 
-// 		const result = await axe(container)
+		const RemixStub = createRemixStub([{ path: '/', Component: Story }])
+		const { container } = render(<RemixStub />)
 
-// 		expect(result).toHaveNoViolations()
-// 	})
-// })
+		const result = await axe(container)
+
+		expect(result).toHaveNoViolations()
+	})
+})

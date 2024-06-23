@@ -11,7 +11,7 @@ export const getStoriesTestCases = (
 	stories: Store_CSFExports<ReactRenderer, any>,
 ) =>
 	Object.values<StoryFn>(composeStories(stories)).map(Story => {
-		return [Story.storyName, Story]
+		return [Story.storyName, Story] as const
 	})
 
 export const disableControls = <Component extends ComponentType<any>>(

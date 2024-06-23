@@ -1,11 +1,8 @@
-import { faker } from '@faker-js/faker'
-import { composeStories } from '@storybook/react'
-import { render, screen } from '@testing-library/react'
+import { createRemixStub } from '@remix-run/testing'
+import { render } from '@testing-library/react'
 import { axe } from 'jest-axe'
 import { getStoriesTestCases } from '#app/utils/storybook.ts'
-import * as {{name}}Stories from './{{name}}.stories'
-
-const { Component } = composeStories({{name}}Stories)
+import * as {{name}}Stories from './{{name}}.stories.tsx'
 
 const testCases = getStoriesTestCases({{name}}Stories)
 
@@ -15,7 +12,9 @@ describe('{{name}} component', () => {
 		async (_storyName, Story) => {
 			if (!Story) throw new Error('Missing story to test!')
 
-			const { container } = render(<Story />)
+			const RemixStub = createRemixStub([{ path: '/', Component: Story }])
+			const { container } = render(<RemixStub />)
+
 			expect(container).toMatchSnapshot()
 		},
 	)
@@ -23,7 +22,8 @@ describe('{{name}} component', () => {
 	test.each(testCases)('a11y test of %s story', async (_storyName, Story) => {
 		if (!Story) throw new Error('Missing story to test!')
 
-		const { container } = render(<Story />)
+		const RemixStub = createRemixStub([{ path: '/', Component: Story }])
+		const { container } = render(<RemixStub />)
 
 		const result = await axe(container)
 
