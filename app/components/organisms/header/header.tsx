@@ -1,9 +1,6 @@
 import { Link } from '@remix-run/react'
-import { Button } from '#app/components/ui/button.tsx'
-import { Icon } from '#app/components/ui/icon.tsx'
-import Logo from './Logo.svg'
-import { IconButton } from './ui/icon-button'
-import { NavigationLink } from './ui/navigation-link'
+import { Button, IconButton, NavigationLink, Icon } from '#app/components/atoms'
+import Logo from '../../Logo.svg'
 
 const navigationLinks = [
 	{ to: '/', children: 'Strona główna' },
