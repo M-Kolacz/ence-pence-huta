@@ -1,5 +1,18 @@
+import {
+	type ReactRenderer,
+	composeStories,
+	type StoryFn,
+} from '@storybook/react'
+import { type Store_CSFExports } from '@storybook/types'
 import { type ComponentType, type ComponentProps } from 'react'
 import { type MY_VIEWPORTS, allModes } from '../../.storybook/modes.ts'
+
+export const getStoriesTestCases = (
+	stories: Store_CSFExports<ReactRenderer, any>,
+) =>
+	Object.values<StoryFn>(composeStories(stories)).map(Story => {
+		return [Story.storyName, Story] as const
+	})
 
 export const disableControls = <Component extends ComponentType<any>>(
 	controls: (keyof ComponentProps<Component>)[],

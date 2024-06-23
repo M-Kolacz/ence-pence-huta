@@ -27,6 +27,12 @@ export const Mobile: Story = {
 	},
 }
 
+export const Tablet: Story = {
+	parameters: {
+		...setViewport('Tablet'),
+	},
+}
+
 export const Desktop: Story = {
 	parameters: {
 		...setViewport('Desktop'),

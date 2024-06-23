@@ -1,0 +1,32 @@
+import { createRemixStub } from '@remix-run/testing'
+import { render } from '@testing-library/react'
+import { axe } from 'jest-axe'
+import { getStoriesTestCases } from '#app/utils/storybook.ts'
+import * as {{name}}Stories from './{{name}}.stories.tsx'
+
+const testCases = getStoriesTestCases({{name}}Stories)
+
+describe('{{name}} component', () => {
+	test.each(testCases)(
+		'snapshot test of %s story',
+		async (_storyName, Story) => {
+			if (!Story) throw new Error('Missing story to test!')
+
+			const RemixStub = createRemixStub([{ path: '/', Component: Story }])
+			const { container } = render(<RemixStub />)
+
+			expect(container).toMatchSnapshot()
+		},
+	)
+
+	test.each(testCases)('a11y test of %s story', async (_storyName, Story) => {
+		if (!Story) throw new Error('Missing story to test!')
+
+		const RemixStub = createRemixStub([{ path: '/', Component: Story }])
+		const { container } = render(<RemixStub />)
+
+		const result = await axe(container)
+
+		expect(result).toHaveNoViolations()
+	})
+})

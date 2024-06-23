@@ -1,26 +1,24 @@
 import { type Meta, type StoryObj } from '@storybook/react'
 import { disableControls, setDesignPreview } from '#app/utils/storybook.ts'
-import { Button } from './button.tsx'
+import { {{name}} } from './{{name}}.tsx'
 
 const meta = {
-	title: '⚛️ Atoms/Button',
-	component: Button,
+	title: '⚛️ Atoms/{{name}}',
+	component: {{name}},
 	parameters: {
 		layout: 'centered',
 		...setDesignPreview(''),
 	},
 	args: { children: 'Hello there' },
 	argTypes: {
-		...disableControls<typeof Button>(['aria-checked']),
+		...disableControls<typeof {{name}}>(['aria-checked']),
 	},
 	tags: ['autodocs'],
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof {{name}}>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Component: Story = {
-	args: {
-		variant: 'primary',
-	},
+	args: {},
 }

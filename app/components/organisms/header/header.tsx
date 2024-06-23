@@ -18,27 +18,29 @@ export const Header = () => {
 				className="md:h-[121px] md:w-[150px]"
 			/>
 
-			<IconButton className="md:hidden">
-				<Icon name="menu" size="xl" title="Nawigacja strony" />
+			<IconButton className="md:hidden" title="Nawigacja strony">
+				<Icon name="menu" size="xl" />
 			</IconButton>
 
-			<nav className="hidden list-none gap-6 space-x-8 md:flex">
-				{navigationLinks.map(link => {
-					if (link.to === '/kontakt')
+			<nav className="hidden md:block">
+				<ul className="list-none gap-6 space-x-8 md:flex">
+					{navigationLinks.map(link => {
+						if (link.to === '/kontakt')
+							return (
+								<li key={link.to}>
+									<Button variant={'outline'} asChild>
+										<Link {...link} />
+									</Button>
+								</li>
+							)
+
 						return (
-							<li key={link.to}>
-								<Button variant={'outline'} asChild>
-									<Link {...link} />
-								</Button>
+							<li key={link.to} className="flex items-center justify-center">
+								<NavigationLink {...link} className="text-xl font-bold" />
 							</li>
 						)
-
-					return (
-						<li key={link.to} className="flex items-center justify-center">
-							<NavigationLink {...link} className="text-xl font-bold" />
-						</li>
-					)
-				})}
+					})}
+				</ul>
 			</nav>
 		</header>
 	)
