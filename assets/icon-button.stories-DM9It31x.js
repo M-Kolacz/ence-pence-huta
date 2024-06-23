@@ -1,0 +1,3 @@
+import{s as r,j as a,d as n}from"./misc-C6mWZpX3.js";import{I as m,a as c}from"./icon-button-BD9kVDgA.js";import"./index-CEThVCg_.js";import"./modes-CfxMDJKC.js";const u={title:"⚛️ Atoms/IconButton",component:m,parameters:{layout:"centered",...r("https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-22&t=SgllQF4sLHtxY4V0-4")},args:{children:a.jsx(c,{name:"cereal",size:"xl"})},argTypes:n(["children"]),tags:["autodocs"]},e={args:{}};var t,o,s;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {}
+}`,...(s=(o=e.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const g=["Component"];export{e as Component,g as __namedExportsOrder,u as default};
