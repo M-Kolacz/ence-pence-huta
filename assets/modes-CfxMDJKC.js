@@ -1,0 +1,1 @@
+const e={Desktop:{name:"Desktop",styles:{width:"1440px",height:"1024px"}},Tablet:{name:"Tablet",styles:{width:"1024px",height:"1366px"}},Mobile:{name:"Mobile",styles:{width:"360px",height:"800px"}}},t={[e.Mobile.name]:{viewport:e.Mobile.name},[e.Tablet.name]:{viewport:e.Tablet.name},[e.Desktop.name]:{viewport:e.Desktop.name}};export{e as M,t as a};
