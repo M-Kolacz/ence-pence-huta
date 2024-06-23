@@ -15,5 +15,7 @@ export default defineConfig({
 			include: ['app/**/*.{ts,tsx}'],
 			all: true,
 		},
+		globals: true,
+		environment: 'jsdom',
 	},
 })

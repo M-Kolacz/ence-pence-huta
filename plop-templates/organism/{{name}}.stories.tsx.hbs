@@ -1,0 +1,47 @@
+import { type Meta, type StoryObj } from '@storybook/react'
+import {
+	disableControls,
+	setDesignPreview,
+	setViewport,
+} from '#app/utils/storybook.ts'
+import { {{name}} } from './{{name}}.tsx'
+
+const meta = {
+	title: '⚛️ Atoms/{{name}}',
+	component: {{name}},
+	parameters: {
+		layout: 'centered',
+		...setDesignPreview(''),
+	},
+	args: { children: 'Hello there' },
+	argTypes: {
+		...disableControls<typeof {{name}}>(['aria-checked']),
+	},
+	tags: ['autodocs'],
+} satisfies Meta<typeof {{name}}>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Component: Story = {
+	args: {},
+}
+
+export const Mobile: Story = {
+	parameters: {
+		...setViewport('Mobile'),
+	},
+}
+
+export const Tablet: Story = {
+	parameters: {
+		...setViewport('Tablet'),
+	},
+}
+
+export const Desktop: Story = {
+	parameters: {
+		...setViewport('Desktop'),
+	},
+}
+
