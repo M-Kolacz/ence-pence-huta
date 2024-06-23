@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from '@storybook/react'
+import { Icon } from '#app/components/atoms'
 import { disableControls, setDesignPreview } from '#app/utils/storybook.ts'
 import { IconButton } from './icon-button.tsx'
-import { Icon } from './icon.tsx'
 
 const meta = {
 	title: '⚛️ Atoms/IconButton',
