@@ -1,12 +1,15 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { disableControls } from '#app/utils/storybook.ts'
+import { disableControls, setDesignPreview } from '#app/utils/storybook.ts'
 import { NavigationLink } from './navigation-link.tsx'
 
 const meta = {
-	title: 'Navigation Link',
+	title: '⚛️ Atoms/Navigation Link',
 	component: NavigationLink,
 	parameters: {
 		layout: 'centered',
+		...setDesignPreview(
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-35&t=SgllQF4sLHtxY4V0-4',
+		),
 	},
 	args: { children: 'Strona główna', to: '/abc' },
 	argTypes: {

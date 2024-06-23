@@ -64,6 +64,7 @@
     "@remix-run/react": "2.9.2",
     "@sentry/profiling-node": "^8.9.2",
     "@sentry/remix": "^8.9.2",
+    "@storybook/addon-designs": "^8.0.2",
     "address": "^2.0.2",
     "bcryptjs": "^2.4.3",
     "better-sqlite3": "^11.0.0",
