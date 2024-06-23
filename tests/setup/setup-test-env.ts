@@ -5,7 +5,7 @@ import '#app/utils/env.server.ts'
 
 import { installGlobals } from '@remix-run/node'
 import { cleanup } from '@testing-library/react'
-import { afterEach, beforeEach, vi, type MockInstance, expect } from 'vitest'
+import { afterEach, beforeEach, vi, type MockInstance } from 'vitest'
 import { server } from '#tests/mocks/index.ts'
 import './custom-matchers.ts'
 
