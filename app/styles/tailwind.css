@@ -64,7 +64,7 @@
 
 	@media screen(md) {
 		:root {
-			--app: theme(spacing[6]);
+			--spacing-app: theme(spacing[6]);
 
 			--text-h1: theme(fontSize[6xl]);
 			--text-h2: theme(fontSize[4xl]);
@@ -82,7 +82,7 @@
 
 	@media screen(lg) {
 		:root {
-			--app: theme(spacing[8]);
+			--spacing-app: theme(spacing[8]);
 
 			--text-h1: theme(fontSize[7xl]);
 			--text-h2: theme(fontSize[5xl]);

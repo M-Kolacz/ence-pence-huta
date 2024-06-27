@@ -23,7 +23,7 @@ export const Header = () => {
 			</IconButton>
 
 			<nav className="hidden md:block">
-				<ul className="list-none gap-6 space-x-8 md:flex">
+				<ul className="list-none gap-6 md:flex">
 					{navigationLinks.map(link => {
 						if (link.to === '/kontakt')
 							return (

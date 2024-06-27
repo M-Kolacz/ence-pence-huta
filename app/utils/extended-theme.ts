@@ -51,4 +51,9 @@ export const extendedTheme = {
 			},
 		],
 	},
+	borderColor: {
+		subtle: 'var(--border-subtle)',
+		base: 'var(--border-base)',
+		strong: 'var(--border-strong)',
+	},
 } satisfies Config['theme']

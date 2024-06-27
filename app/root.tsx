@@ -123,7 +123,7 @@ function Document({
 				)}
 				<Links />
 			</head>
-			<body className="h-full bg-background p-app text-foreground">
+			<body className="bg-background text-foreground h-full p-app">
 				{children}
 				<script
 					nonce={nonce}
