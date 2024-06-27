@@ -27,18 +27,74 @@
 		--ring: 221.2 83.2% 53.3%;
 		--radius: 0.5rem;
 
-		--app: theme(spacing[5]);
+		--text-subtle: theme(colors.neutral[600]);
+		--text-strong: theme(colors.neutral[950]);
+		--text-inactive: theme(colors.neutral[500]);
+
+		--bg-subtle: theme(colors.neutral[0]);
+		--bg-base: theme(colors.neutral[50]);
+		--bg-strong: theme(colors.neutral[100]);
+
+		--border-subtle: theme(colors.neutral[100]);
+		--border-base: theme(colors.neutral[200]);
+		--border-strong: theme(colors.neutral[300]);
+
+		--icon-subtle: theme(colors.neutral[400]);
+		--icon-base: theme(colors.neutral[600]);
+		--icon-strong: theme(colors.neutral[950]);
+
+		--weight-buttons: theme(fontWeight[medium]);
+		--weight-headings: theme(fontWeight[bold]);
+		--weight-paragraphs: theme(fontWeight[normal]);
+
+		--spacing-app: theme(spacing[5]);
+
+		--text-h1: theme(fontSize[5xl]);
+		--text-h2: theme(fontSize[3xl]);
+		--text-p1: theme(fontSize[xl]);
+		--text-p5: theme(fontSize[xs]);
+		--text-b1: theme(fontSize[base]);
+
+		--line-h1: theme(lineHeight[5xl]);
+		--line-h2: theme(fontSize[3xl]);
+		--line-p1: theme(fontSize[xl]);
+		--line-p5: theme(fontSize[xs]);
+		--line-b1: theme(fontSize[base]);
 	}
 
 	@media screen(md) {
 		:root {
 			--app: theme(spacing[6]);
+
+			--text-h1: theme(fontSize[6xl]);
+			--text-h2: theme(fontSize[4xl]);
+			--text-p1: theme(fontSize[xl]);
+			--text-p5: theme(fontSize[xs]);
+			--text-b1: theme(fontSize[base]);
+
+			--line-h1: theme(lineHeight[6xl]);
+			--line-h2: theme(fontSize[4xl]);
+			--line-p1: theme(fontSize[xl]);
+			--line-p5: theme(fontSize[xs]);
+			--line-b1: theme(fontSize[base]);
 		}
 	}
 
 	@media screen(lg) {
 		:root {
 			--app: theme(spacing[8]);
+
+			--text-h1: theme(fontSize[7xl]);
+			--text-h2: theme(fontSize[5xl]);
+			--text-p1: theme(fontSize[xl]);
+			--text-p5: theme(fontSize[xs]);
+			--text-b1: theme(fontSize[base]);
+
+			--line-h1: theme(lineHeight[7xl]);
+			--line-h2: theme(fontSize[5xl]);
+			--line-p1: theme(fontSize[xl]);
+			--line-p5: theme(fontSize[xs]);
+			--line-b1: theme(fontSize[base]);
 		}
 	}
 
