@@ -15,7 +15,7 @@ exports[`Header component > snapshot test of Component story 1`] = `
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -88,7 +88,7 @@ exports[`Header component > snapshot test of Desktop story 1`] = `
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -161,7 +161,7 @@ exports[`Header component > snapshot test of Mobile story 1`] = `
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -234,7 +234,7 @@ exports[`Header component > snapshot test of Tablet story 1`] = `
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"

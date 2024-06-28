@@ -49,16 +49,3 @@ export const Variants: Story = {
 		...disableControls<typeof Button>(['variant']),
 	},
 }
-
-export const Sizes: Story = {
-	render: args => {
-		return (
-			<div className="flex gap-4">
-				<Button {...args} size="default" />
-			</div>
-		)
-	},
-	argTypes: {
-		...disableControls<typeof Button>(['size']),
-	},
-}
