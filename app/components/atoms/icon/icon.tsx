@@ -1,10 +1,39 @@
 import { type SVGProps } from 'react'
 import { cn } from '#app/utils/misc.tsx'
+import { type IconName } from './icons/name.ts'
 import href from './icons/sprite.svg'
-import { type IconName } from '@/icon-name'
 
 export { href }
 export { IconName }
+
+export const iconNames: IconName[] = [
+	'add',
+	'baby-shoes',
+	'blanket',
+	'breakfast',
+	'bubble-tea',
+	'cancel',
+	'cereal',
+	'diaper',
+	'document-money',
+	'dollars',
+	'email',
+	'facebook-verified',
+	'facebook',
+	'folder',
+	'image',
+	'kindergarten',
+	'menu',
+	'milk-bottle',
+	'newspaper',
+	'offer',
+	'ok',
+	'pacifier',
+	'phone-call',
+	'piggy-bank',
+	'salad',
+	'web',
+]
 
 /**
  * Renders an SVG icon. The icon defaults to the size of the font. To make it

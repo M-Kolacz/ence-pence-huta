@@ -1,0 +1,204 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Icon component > snapshot test of Component story 1`] = `
+<div>
+  <svg
+    class="inline h-6 w-6 self-center"
+  >
+    <use
+      href="/app/components/atoms/icon/icons/sprite.svg#add"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Icon component > snapshot test of Icons story 1`] = `
+<div>
+  <div
+    class="flex max-w-12 flex-wrap gap-4"
+  >
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#add"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#baby-shoes"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#blanket"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#breakfast"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#bubble-tea"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#cancel"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#cereal"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#diaper"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#document-money"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#dollars"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#email"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#facebook-verified"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#facebook"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#folder"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#image"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#kindergarten"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#menu"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#milk-bottle"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#newspaper"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#offer"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#ok"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#pacifier"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#phone-call"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#piggy-bank"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#salad"
+      />
+    </svg>
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#web"
+      />
+    </svg>
+  </div>
+</div>
+`;
