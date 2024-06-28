@@ -6,6 +6,35 @@ import { type IconName } from '@/icon-name'
 export { href }
 export { IconName }
 
+export const iconNames = [
+	'add',
+	'baby-shoes',
+	'blanket',
+	'breakfast',
+	'bubble-tea',
+	'cancel',
+	'cereal',
+	'diaper',
+	'document-money',
+	'dollars',
+	'email',
+	'facebook-verified',
+	'facebook',
+	'folder',
+	'image',
+	'kindergarten',
+	'menu',
+	'milk-bottle',
+	'newspaper',
+	'offer',
+	'ok',
+	'pacifier',
+	'phone-call',
+	'piggy-bank',
+	'salad',
+	'web',
+] as const
+
 /**
  * Renders an SVG icon. The icon defaults to the size of the font. To make it
  * align vertically with neighboring text, you can pass the text as a child of
