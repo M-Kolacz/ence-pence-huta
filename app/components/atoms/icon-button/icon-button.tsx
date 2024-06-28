@@ -7,7 +7,7 @@ const IconButton = ({ className, ...props }: IconButtonProps) => {
 	return (
 		<button
 			className={cn(
-				'inline-flex h-12 w-12 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background p-2 ring-offset-background transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+				'inline-flex h-7 w-7 items-center justify-center whitespace-nowrap rounded-md border border-base bg-neutral-0 p-2 transition-colors hover:bg-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
 				className,
 			)}
 			{...props}

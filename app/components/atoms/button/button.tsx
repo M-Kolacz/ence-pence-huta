@@ -5,22 +5,20 @@ import { forwardRef, type ButtonHTMLAttributes } from 'react'
 import { cn } from '#app/utils/misc.tsx'
 
 const buttonVariants = cva(
-	'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+	'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
 	{
 		variants: {
 			variant: {
-				primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
+				primary: 'bg-primary-600 text-neutral-50 hover:bg-primary-600/90',
 				secondary:
-					'bg-orange-600 text-primary-foreground hover:bg-orange-600/80 focus-visible:ring-orange-600',
+					'bg-secondary-600 text-neutral-0 hover:bg-secondary-600/90 focus-visible:ring-secondary-600',
 				outline:
-					'border border-primary bg-background text-primary hover:bg-blue-100/30',
+					'border border-primary-600 bg-neutral-0 text-primary-600 hover:bg-primary-100/30',
 				'secondary-outline':
-					'border border-orange-600 bg-background text-orange-600 hover:bg-orange-100/30 focus-visible:ring-orange-600',
+					'border border-secondary-600 bg-neutral-0 text-secondary-600 hover:bg-secondary-100/30 focus-visible:ring-secondary-600',
 			},
 			size: {
-				default: 'h-10 px-4 py-2',
-				sm: 'h-9 rounded-md px-3',
-				lg: 'h-11 rounded-md px-8',
+				default: 'h-[40px] px-4 py-3',
 			},
 		},
 		defaultVariants: {

@@ -11,11 +11,11 @@ exports[`Header component > snapshot test of Component story 1`] = `
       src="/app/components/Logo.svg"
     />
     <button
-      class="inline-flex h-12 w-12 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background p-2 ring-offset-background transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
+      class="inline-flex h-7 w-7 items-center justify-center whitespace-nowrap rounded-md border border-base bg-neutral-0 p-2 transition-colors hover:bg-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -26,14 +26,14 @@ exports[`Header component > snapshot test of Component story 1`] = `
       class="hidden md:block"
     >
       <ul
-        class="list-none gap-6 space-x-8 md:flex"
+        class="list-none gap-6 md:flex"
       >
         <li
           class="flex items-center justify-center"
         >
           <a
             aria-current="page"
-            class="font-sans hover:text-blue-950 text-neutral-950 text-xl font-bold"
+            class="font-sans hover:text-primary-950 text-neutral-950 text-xl font-bold"
             href="/"
           >
             Strona główna
@@ -43,7 +43,7 @@ exports[`Header component > snapshot test of Component story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/aktualnosci"
           >
             Aktualności
@@ -53,7 +53,7 @@ exports[`Header component > snapshot test of Component story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/oferta"
           >
             Oferta
@@ -61,7 +61,7 @@ exports[`Header component > snapshot test of Component story 1`] = `
         </li>
         <li>
           <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary bg-background text-primary hover:bg-blue-100/30 h-10 px-4 py-2"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-600 bg-neutral-0 text-primary-600 hover:bg-primary-100/30 h-[40px] px-4 py-3"
             href="/kontakt"
           >
             Kontakt
@@ -84,11 +84,11 @@ exports[`Header component > snapshot test of Desktop story 1`] = `
       src="/app/components/Logo.svg"
     />
     <button
-      class="inline-flex h-12 w-12 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background p-2 ring-offset-background transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
+      class="inline-flex h-7 w-7 items-center justify-center whitespace-nowrap rounded-md border border-base bg-neutral-0 p-2 transition-colors hover:bg-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -99,14 +99,14 @@ exports[`Header component > snapshot test of Desktop story 1`] = `
       class="hidden md:block"
     >
       <ul
-        class="list-none gap-6 space-x-8 md:flex"
+        class="list-none gap-6 md:flex"
       >
         <li
           class="flex items-center justify-center"
         >
           <a
             aria-current="page"
-            class="font-sans hover:text-blue-950 text-neutral-950 text-xl font-bold"
+            class="font-sans hover:text-primary-950 text-neutral-950 text-xl font-bold"
             href="/"
           >
             Strona główna
@@ -116,7 +116,7 @@ exports[`Header component > snapshot test of Desktop story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/aktualnosci"
           >
             Aktualności
@@ -126,7 +126,7 @@ exports[`Header component > snapshot test of Desktop story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/oferta"
           >
             Oferta
@@ -134,7 +134,7 @@ exports[`Header component > snapshot test of Desktop story 1`] = `
         </li>
         <li>
           <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary bg-background text-primary hover:bg-blue-100/30 h-10 px-4 py-2"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-600 bg-neutral-0 text-primary-600 hover:bg-primary-100/30 h-[40px] px-4 py-3"
             href="/kontakt"
           >
             Kontakt
@@ -157,11 +157,11 @@ exports[`Header component > snapshot test of Mobile story 1`] = `
       src="/app/components/Logo.svg"
     />
     <button
-      class="inline-flex h-12 w-12 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background p-2 ring-offset-background transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
+      class="inline-flex h-7 w-7 items-center justify-center whitespace-nowrap rounded-md border border-base bg-neutral-0 p-2 transition-colors hover:bg-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -172,14 +172,14 @@ exports[`Header component > snapshot test of Mobile story 1`] = `
       class="hidden md:block"
     >
       <ul
-        class="list-none gap-6 space-x-8 md:flex"
+        class="list-none gap-6 md:flex"
       >
         <li
           class="flex items-center justify-center"
         >
           <a
             aria-current="page"
-            class="font-sans hover:text-blue-950 text-neutral-950 text-xl font-bold"
+            class="font-sans hover:text-primary-950 text-neutral-950 text-xl font-bold"
             href="/"
           >
             Strona główna
@@ -189,7 +189,7 @@ exports[`Header component > snapshot test of Mobile story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/aktualnosci"
           >
             Aktualności
@@ -199,7 +199,7 @@ exports[`Header component > snapshot test of Mobile story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/oferta"
           >
             Oferta
@@ -207,7 +207,7 @@ exports[`Header component > snapshot test of Mobile story 1`] = `
         </li>
         <li>
           <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary bg-background text-primary hover:bg-blue-100/30 h-10 px-4 py-2"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-600 bg-neutral-0 text-primary-600 hover:bg-primary-100/30 h-[40px] px-4 py-3"
             href="/kontakt"
           >
             Kontakt
@@ -230,11 +230,11 @@ exports[`Header component > snapshot test of Tablet story 1`] = `
       src="/app/components/Logo.svg"
     />
     <button
-      class="inline-flex h-12 w-12 items-center justify-center whitespace-nowrap rounded-md border border-input bg-background p-2 ring-offset-background transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
+      class="inline-flex h-7 w-7 items-center justify-center whitespace-nowrap rounded-md border border-base bg-neutral-0 p-2 transition-colors hover:bg-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 md:hidden"
       title="Nawigacja strony"
     >
       <svg
-        class="w-8 h-8 inline self-center"
+        class="inline h-6 w-6 self-center"
       >
         <use
           href="/app/components/atoms/icon/icons/sprite.svg#menu"
@@ -245,14 +245,14 @@ exports[`Header component > snapshot test of Tablet story 1`] = `
       class="hidden md:block"
     >
       <ul
-        class="list-none gap-6 space-x-8 md:flex"
+        class="list-none gap-6 md:flex"
       >
         <li
           class="flex items-center justify-center"
         >
           <a
             aria-current="page"
-            class="font-sans hover:text-blue-950 text-neutral-950 text-xl font-bold"
+            class="font-sans hover:text-primary-950 text-neutral-950 text-xl font-bold"
             href="/"
           >
             Strona główna
@@ -262,7 +262,7 @@ exports[`Header component > snapshot test of Tablet story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/aktualnosci"
           >
             Aktualności
@@ -272,7 +272,7 @@ exports[`Header component > snapshot test of Tablet story 1`] = `
           class="flex items-center justify-center"
         >
           <a
-            class="font-sans text-neutral-500 hover:text-blue-950 text-xl font-bold"
+            class="font-sans text-neutral-500 hover:text-primary-950 text-xl font-bold"
             href="/oferta"
           >
             Oferta
@@ -280,7 +280,7 @@ exports[`Header component > snapshot test of Tablet story 1`] = `
         </li>
         <li>
           <a
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary bg-background text-primary hover:bg-blue-100/30 h-10 px-4 py-2"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-600 bg-neutral-0 text-primary-600 hover:bg-primary-100/30 h-[40px] px-4 py-3"
             href="/kontakt"
           >
             Kontakt

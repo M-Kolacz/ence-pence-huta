@@ -123,7 +123,7 @@ function Document({
 				)}
 				<Links />
 			</head>
-			<body className="bg-background text-foreground">
+			<body className="bg-background text-foreground h-full p-app">
 				{children}
 				<script
 					nonce={nonce}
@@ -145,13 +145,11 @@ function App() {
 
 	return (
 		<Document nonce={nonce} allowIndexing={allowIndexing} env={data.ENV}>
-			<div className="flex h-screen flex-col justify-between">
-				<Header />
-
-				<div className="flex-1">
-					<Outlet />
-				</div>
-			</div>
+			<Header />
+			<main className="h-full">
+				<Outlet />
+			</main>
+			<footer>footer</footer>
 		</Document>
 	)
 }

@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority'
 import { cn } from '#app/utils/misc.tsx'
 
 export const navigationLinkVariants = cva(
-	'font-sans text-base font-bold text-neutral-500 hover:text-blue-950',
+	'font-sans text-p1 font-bold text-neutral-500 hover:text-primary-950',
 	{
 		variants: {
 			active: {
