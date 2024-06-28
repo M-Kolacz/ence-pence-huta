@@ -19,7 +19,7 @@ export const Header = () => {
 			/>
 
 			<IconButton className="md:hidden" title="Nawigacja strony">
-				<Icon name="menu" size="xl" />
+				<Icon name="menu" />
 			</IconButton>
 
 			<nav className="hidden md:block">
