@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`IconButton component > snapshot test of Component story 1`] = `
+<div>
+  <button
+    class="inline-flex h-7 w-7 items-center justify-center whitespace-nowrap rounded-md border border-base bg-neutral-0 p-2 transition-colors hover:bg-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+    title="Icon Button"
+  >
+    <svg
+      class="inline h-6 w-6 self-center"
+    >
+      <use
+        href="/app/components/atoms/icon/icons/sprite.svg#cereal"
+      />
+    </svg>
+  </button>
+</div>
+`;
