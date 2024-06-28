@@ -12,7 +12,7 @@ const meta = {
 			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-22&t=SgllQF4sLHtxY4V0-4',
 		),
 	},
-	args: { children: <Icon name="cereal" size="xl" /> },
+	args: { children: <Icon name="cereal" /> },
 	argTypes: disableControls(['children']),
 	tags: ['autodocs'],
 } satisfies Meta<typeof IconButton>
