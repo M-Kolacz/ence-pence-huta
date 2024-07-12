@@ -1,8 +1,8 @@
 import { type Config } from 'tailwindcss'
-import { blue, orange, slate, red, yellow, green } from 'tailwindcss/colors'
 import animatePlugin from 'tailwindcss-animate'
 import radixPlugin from 'tailwindcss-radix'
 import { extendedTheme } from './app/utils/extended-theme.ts'
+import { colors } from './tokens/colors.ts'
 
 export default {
 	content: ['./app/**/*.{ts,tsx,jsx,js}'],
@@ -53,12 +53,7 @@ export default {
 			'7xl': '84px',
 		},
 		colors: {
-			primary: blue,
-			secondary: orange,
-			neutral: { ...slate, '0': '#fff' } as const,
-			error: red,
-			warning: yellow,
-			success: green,
+			...colors,
 		},
 		borderRadius: {
 			base: '4px',
