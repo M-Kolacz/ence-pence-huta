@@ -9,7 +9,7 @@ const meta = {
 	parameters: {
 		layout: 'centered',
 		...setDesignPreview(
-			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-22&t=SgllQF4sLHtxY4V0-4',
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=149-2&t=hULKaPxwkfdoOxEC-4',
 		),
 	},
 	args: {
