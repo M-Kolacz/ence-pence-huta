@@ -10,10 +10,6 @@ export const extendedTheme = {
 		base: 'var(--bg-base)',
 		strong: 'var(--bg-strong)',
 	},
-	fontFamily: {
-		sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
-		heading: ['var(--font-heading)', ...defaultTheme.fontFamily.sans],
-	},
 	fontSize: {
 		h1: [
 			'var(--text-h1)',
