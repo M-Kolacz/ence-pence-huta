@@ -1,0 +1,1 @@
+const e=["add","baby-shoes","blanket","breakfast","bubble-tea","cancel","cereal","diaper","document-money","dollars","email","facebook-verified","facebook","folder","image","kindergarten","menu","milk-bottle","newspaper","offer","ok","pacifier","phone-call","piggy-bank","salad","web"];export{e as i};
