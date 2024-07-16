@@ -41,9 +41,9 @@
 		--icon-base: theme(colors.neutral[600]);
 		--icon-strong: theme(colors.neutral[950]);
 
-		--weight-buttons: theme(fontWeight[medium]);
+		/* --weight-buttons: theme(fontWeight[medium]);
 		--weight-headings: theme(fontWeight[bold]);
-		--weight-paragraphs: theme(fontWeight[normal]);
+		--weight-paragraphs: theme(fontWeight[normal]); */
 
 		--spacing-app: theme(spacing[5]);
 

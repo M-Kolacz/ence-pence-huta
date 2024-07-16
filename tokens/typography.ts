@@ -1,7 +1,9 @@
+import { fontFamily } from 'tailwindcss/defaultTheme'
+
 export const typography = {
 	fontFamily: {
-		headings: 'Roboto Condensed Variable',
-		parapgraphs: 'Roboto',
+		headings: ['Roboto Condensed Variable', ...fontFamily.sans] as string[],
+		sans: ['Roboto', ...fontFamily.sans] as string[],
 	},
 	fontWeight: {
 		paragraphs: '400',
