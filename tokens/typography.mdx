@@ -1,0 +1,35 @@
+import { Meta, Typeset } from '@storybook/blocks'
+import { typography } from './typography'
+
+<Meta title="Tokens/Typography" />
+
+# Typography
+
+**Font:** {typography.fontFamily.parapgraphs}
+
+**Weight:** {typography.fontWeight.paragraphs}, {typography.fontWeight.buttons}
+
+<Typeset
+	fontSizes={Object.values(typography.fontSize)}
+	fontWeight={typography.fontWeight.paragraphs}
+	sampleText={'The quick brown fox jumps over the lazy dog'}
+	fontFamily={typography.fontFamily.parapgraphs}
+/>
+
+<Typeset
+	fontSizes={Object.values(typography.fontSize)}
+	fontWeight={typography.fontWeight.buttons}
+	sampleText={'The quick brown fox jumps over the lazy dog'}
+	fontFamily={typography.fontFamily.parapgraphs}
+/>
+
+**Font:** {typography.fontFamily.headings}
+
+**Weight:** {typography.fontWeight.headings}
+
+<Typeset
+	fontSizes={Object.values(typography.fontSize)}
+	fontWeight={typography.fontWeight.headings}
+	sampleText={'The quick brown fox jumps over the lazy dog'}
+	fontFamily={typography.fontFamily.headings}
+/>
