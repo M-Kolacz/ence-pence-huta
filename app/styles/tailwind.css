@@ -4,25 +4,27 @@
 
 @layer base {
 	:root {
-		--background: theme(colors.neutral.white);
-		--foreground: theme(colors.neutral[950]);
-		--card: theme(colors.neutral.white);
-		--card-foreground: theme(colors.neutral[950]);
-		--popover: theme(colors.neutral.white);
-		--popover-foreground: theme(colors.neutral[950]);
-		--primary: theme(colors.primary[600]);
-		--primary-foreground: theme(colors.neutral[50]);
-		--secondary: theme(colors.neutral[100]);
-		--secondary-foreground: theme(colors.neutral[900]);
-		--muted: theme(colors.neutral[100]);
-		--muted-foreground: theme(colors.neutral[500]);
-		--accent: theme(colors.neutral[100]);
-		--accent-foreground: theme(colors.neutral[900]);
-		--destructive: theme(colors.error[500]);
-		--destructive-foreground: theme(colors.neutral[50]);
-		--border: theme(colors.neutral[200]);
-		--input: theme(colors.neutral[200]);
-		--ring: theme(colors.primary[600]);
+		--background: 0 0% 100%;
+		--foreground: 229 84% 5%;
+		--card: 0 0% 100%;
+		--card-foreground: 229 84% 5%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 229 84% 5%;
+		--primary: 221.2 83.2% 53.3%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 221.2 83.2% 53.3%;
+		--radius: 0.5rem;
+
 		--radius: 0.5rem;
 
 		--text-subtle: theme(colors.neutral[600]);
@@ -97,11 +99,11 @@
 	}
 
 	.dark {
-		--background: 222.2 84% 4.9%;
+		--background: 229 84% 5%;
 		--foreground: 210 40% 98%;
-		--card: 222.2 84% 4.9%;
+		--card: 229 84% 5%;
 		--card-foreground: 210 40% 98%;
-		--popover: 222.2 84% 4.9%;
+		--popover: 229 84% 5%;
 		--popover-foreground: 210 40% 98%;
 		--primary: 217.2 91.2% 59.8%;
 		--primary-foreground: 222.2 47.4% 11.2%;
