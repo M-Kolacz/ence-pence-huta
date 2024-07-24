@@ -1,13 +1,7 @@
 import { Link } from '@remix-run/react'
 import { Button, IconButton, NavigationLink, Icon } from '#app/components/atoms'
 import Logo from '../../Logo.svg'
-
-const navigationLinks = [
-	{ to: '/', children: 'Strona główna' },
-	{ to: '/aktualnosci', children: 'Aktualności' },
-	{ to: '/oferta', children: 'Oferta' },
-	{ to: '/kontakt', children: 'Kontakt' },
-] as const
+import { navigationLinks } from './header.helpers.ts'
 
 export const Header = () => {
 	return (
@@ -27,7 +21,7 @@ export const Header = () => {
 					{navigationLinks.map(link => {
 						if (link.to === '/kontakt')
 							return (
-								<li key={link.to}>
+								<li key={link.to} className="flex items-center justify-center">
 									<Button variant={'outline'} asChild>
 										<Link {...link} />
 									</Button>
