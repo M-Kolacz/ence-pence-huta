@@ -1,21 +1,6 @@
 import { type NavLinkProps, NavLink } from '@remix-run/react'
-import { cva } from 'class-variance-authority'
 import { cn } from '#app/utils/misc.tsx'
-
-export const navigationLinkVariants = cva(
-	'font-sans text-p1 font-bold text-neutral-500 hover:text-primary-950',
-	{
-		variants: {
-			active: {
-				true: 'text-neutral-950',
-				false: '',
-			},
-		},
-		defaultVariants: {
-			active: false,
-		},
-	},
-)
+import { variants } from './navigation-link-variants.ts'
 
 const NavigationLink = (props: NavLinkProps) => {
 	const { className, ...restProps } = props
@@ -23,7 +8,7 @@ const NavigationLink = (props: NavLinkProps) => {
 	return (
 		<NavLink
 			className={({ isActive }) =>
-				cn(navigationLinkVariants({ active: isActive }), className)
+				cn(variants({ active: isActive }), className)
 			}
 			{...restProps}
 		/>

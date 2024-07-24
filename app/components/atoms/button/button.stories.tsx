@@ -10,7 +10,7 @@ const meta = {
 	parameters: {
 		layout: 'centered',
 		...setDesignPreview(
-			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-76&t=SgllQF4sLHtxY4V0-4',
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=177-5&t=fp53uoEO5s9CIEdr-4',
 		),
 	},
 	args: {
@@ -46,10 +46,15 @@ export const IconButton: Story = {
 	args: {
 		variant: 'outline',
 		size: 'icon',
-		children: <Icon name="baby-shoes" />,
+		children: <Icon name="add" />,
 	},
 	argTypes: {
 		...disableControls<typeof Button>(['size', 'children', 'variant']),
+	},
+	parameters: {
+		...setDesignPreview(
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=184-256&t=fp53uoEO5s9CIEdr-4',
+		),
 	},
 }
 
