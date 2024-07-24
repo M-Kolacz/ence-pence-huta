@@ -20,6 +20,7 @@ const variant = {
 		'border',
 		'border-input',
 		'bg-background',
+		'text-secondary-foreground',
 		'hover:bg-accent',
 		'hover:text-accent-foreground',
 	],

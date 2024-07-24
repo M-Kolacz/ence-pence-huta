@@ -6,9 +6,9 @@ export const typography = {
 		sans: ['Roboto', ...fontFamily.sans] as string[],
 	},
 	fontWeight: {
-		paragraphs: '400',
-		buttons: '500',
-		headings: '700',
+		normal: '400',
+		medium: '500',
+		bold: '700',
 	},
 	lineHeight: {
 		xs: '16px',

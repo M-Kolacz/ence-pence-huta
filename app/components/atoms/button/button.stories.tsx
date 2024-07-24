@@ -13,7 +13,12 @@ const meta = {
 			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=20-76&t=SgllQF4sLHtxY4V0-4',
 		),
 	},
-	args: { children: 'Click me', variant: 'default', size: 'default' },
+	args: {
+		children: 'Click me',
+		variant: 'default',
+		size: 'default',
+		disabled: false,
+	},
 	argTypes: {
 		variant: {
 			options: variations,

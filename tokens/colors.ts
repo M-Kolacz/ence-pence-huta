@@ -26,7 +26,7 @@ export const colors = {
 		950: '#431407',
 	},
 	neutral: {
-		0: '#ffffff',
+		white: '#ffffff',
 		50: '#f8fafc',
 		100: '#f1f5f9',
 		200: '#e2e8f0',
@@ -38,6 +38,7 @@ export const colors = {
 		800: '#1e293b',
 		900: '#0f172a',
 		950: '#020617',
+		black: '#000000',
 	},
 	success: {
 		50: '#f0fdf4',
