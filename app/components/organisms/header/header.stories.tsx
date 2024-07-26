@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { userEvent, within } from '@storybook/test'
+import { userEvent, within, screen } from '@storybook/test'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Header } from './header.tsx'
 
@@ -49,6 +49,10 @@ export const MobileOpen: Story = {
 		})
 
 		userEvent.click(menuButton)
+
+		const dialog = within(await screen.findByRole('dialog'))
+
+		await dialog.findByRole('button', { name: 'Strona główna' })
 	},
 }
 
