@@ -112,7 +112,7 @@ function Document({
 	allowIndexing?: boolean
 }) {
 	return (
-		<html lang="en" className={`${theme} h-full overflow-x-hidden`}>
+		<html lang="en" className={`${theme} overflow-x-hidden`}>
 			<head>
 				<ClientHintCheck nonce={nonce} />
 				<Meta />
@@ -123,7 +123,7 @@ function Document({
 				)}
 				<Links />
 			</head>
-			<body className="bg-background text-foreground h-full p-app">
+			<body className="bg-background text-foreground">
 				{children}
 				<script
 					nonce={nonce}
@@ -145,11 +145,13 @@ function App() {
 
 	return (
 		<Document nonce={nonce} allowIndexing={allowIndexing} env={data.ENV}>
-			<Header />
-			<main className="h-full">
-				<Outlet />
-			</main>
-			<footer>footer</footer>
+			<div className="p-app">
+				<Header />
+				<main>
+					<Outlet />
+				</main>
+				<footer>footer</footer>
+			</div>
 		</Document>
 	)
 }
