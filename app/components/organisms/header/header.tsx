@@ -2,20 +2,16 @@ import { Link } from '@remix-run/react'
 import { useState } from 'react'
 import {
 	Button,
-	IconButton,
 	NavigationLink,
 	Icon,
 	Drawer,
 	DrawerClose,
 	DrawerContent,
-	DrawerDescription,
-	DrawerFooter,
 	DrawerHeader,
-	DrawerTitle,
 	DrawerTrigger,
 } from '#app/components/atoms'
+import { navigationLinks } from '#app/ssot/navigation.ts'
 import Logo from '../../Logo.svg'
-import { navigationLinks } from './header.helpers.ts'
 
 export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)

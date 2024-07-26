@@ -16,7 +16,7 @@ import {
 import { withSentry } from '@sentry/remix'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
 import { href as iconsHref } from './components/atoms/icon/icon.tsx'
-import { Header } from './components/organisms'
+import { Footer, Header } from './components/organisms'
 import { GeneralErrorBoundary } from './components/templates'
 import fontStyleSheetUrl from './styles/font.css?url'
 import tailwindStyleSheetUrl from './styles/tailwind.css?url'
@@ -150,7 +150,7 @@ function App() {
 				<main>
 					<Outlet />
 				</main>
-				<footer>footer</footer>
+				<Footer />
 			</div>
 		</Document>
 	)
