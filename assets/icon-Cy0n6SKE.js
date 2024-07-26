@@ -1,4 +1,0 @@
-import{j as o}from"./jsx-runtime-BZf_YgVj.js";import{useMDXComponents as e}from"./index-BwF_zu8I.js";import{M as i,I as s,d as c}from"./index-DhK0eWZF.js";import{I as a}from"./icon-DxR5d0Rk.js";import{i as p}from"./name-BiYuBSRq.js";import"./index-CEThVCg_.js";import"./iframe-BhhAlHrP.js";import"../sb-preview/runtime.js";import"./index-DRe9y7bH.js";import"./index-MeWECQMo.js";import"./index-DXimoRZY.js";import"./index-9UrncIcR.js";import"./index-DrFu-skq.js";import"./misc-Bk0sxs-g.js";function m(n){const t={h1:"h1",...e(),...n.components};return o.jsxs(o.Fragment,{children:[o.jsx(i,{title:"Tokens/Icons"}),`
-`,o.jsx(t.h1,{id:"iconography",children:"Iconography"}),`
-`,o.jsx("br",{}),`
-`,o.jsx(s,{children:p.map(r=>o.jsx(c,{name:r,children:o.jsx(a,{name:r})}))})]})}function _(n={}){const{wrapper:t}={...e(),...n.components};return t?o.jsx(t,{...n,children:o.jsx(m,{...n})}):m(n)}export{_ as default};
