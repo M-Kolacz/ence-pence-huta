@@ -39,7 +39,7 @@ export const Header = () => {
 						<Icon name="add" />
 					</Button>
 				</DrawerTrigger>
-				<DrawerContent className="flex flex-col gap-6 p-app">
+				<DrawerContent className="flex flex-col gap-6 p-app outline-none">
 					<DrawerHeader className="flex items-center justify-between">
 						<img
 							src={Logo}
