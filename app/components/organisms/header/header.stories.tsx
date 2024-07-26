@@ -37,6 +37,9 @@ export const MobileOpen: Story = {
 	name: 'Mobile - open navigation',
 	parameters: {
 		...setViewport('Mobile'),
+		...setDesignPreview(
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=200-1369&t=1zUiTMlrtdfwd4MW-4',
+		),
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
