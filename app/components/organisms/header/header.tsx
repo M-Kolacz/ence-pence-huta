@@ -23,18 +23,18 @@ export const Header = () => {
 				alt="Ence Pence Nowa Huta"
 				className="md:h-[121px] md:w-[150px]"
 			/>
-
 			<Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
 				<DrawerTrigger asChild>
 					<Button
 						size="icon"
 						variant="outline"
-						className="md:hidden"
+						className="visible md:hidden"
 						title="Nawigacja strony"
 					>
 						<Icon name="add" />
 					</Button>
 				</DrawerTrigger>
+
 				<DrawerContent className="flex flex-col gap-6 p-app outline-none">
 					<DrawerHeader className="flex items-center justify-between">
 						<img

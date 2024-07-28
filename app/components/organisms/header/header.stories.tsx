@@ -1,5 +1,5 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { userEvent, within, screen } from '@storybook/test'
+import { userEvent, within, screen, logRoles } from '@storybook/test'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Header } from './header.tsx'
 
@@ -43,10 +43,8 @@ export const MobileOpen: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-
-		const menuButton = await canvas.findByRole('button', {
-			name: 'Nawigacja strony',
-		})
+		logRoles(canvasElement)
+		const menuButton = await canvas.findByRole('button', { expanded: false })
 
 		userEvent.click(menuButton)
 

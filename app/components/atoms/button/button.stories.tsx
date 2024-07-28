@@ -47,6 +47,7 @@ export const IconButton: Story = {
 		variant: 'outline',
 		size: 'icon',
 		children: <Icon name="add" />,
+		title: 'Icon button',
 	},
 	argTypes: {
 		...disableControls<typeof Button>(['size', 'children', 'variant']),
@@ -83,6 +84,7 @@ export const Sizes: Story = {
 						{...args}
 						size={size}
 						children={size === 'icon' ? null : args.children}
+						title={size === 'icon' ? 'Icon button' : undefined}
 					/>
 				))}
 			</div>

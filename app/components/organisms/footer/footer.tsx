@@ -37,10 +37,14 @@ export const Footer = () => {
 					</ul>
 				</nav>
 				<div className="flex gap-4">
-					<Button size="icon" variant="outline">
+					<Button size="icon" variant="outline" title="Galeria">
 						<Icon name="image" />
 					</Button>
-					<Button size="icon" variant="outline">
+					<Button
+						size="icon"
+						variant="outline"
+						title="Fanpage żłobka na Facebook-u"
+					>
 						<Icon name="facebook" />
 					</Button>
 				</div>

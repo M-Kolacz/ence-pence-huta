@@ -1,36 +1,51 @@
-export const MY_VIEWPORTS = {
+export const VIEWPORTS_DIMENSIONS = {
+	Desktop: {
+		width: 1440,
+		height: 1024,
+	},
+	Tablet: {
+		width: 1024,
+		height: 1366,
+	},
+	Mobile: {
+		width: 360,
+		height: 800,
+	},
+} as const
+
+export const STORYBOOK_VIEWPORTS = {
 	Desktop: {
 		name: 'Desktop',
 		styles: {
-			width: `1440px`,
-			height: `1024px`,
+			width: `${VIEWPORTS_DIMENSIONS.Desktop.width}px`,
+			height: `${VIEWPORTS_DIMENSIONS.Desktop.height}px`,
 		},
 	},
 	Tablet: {
 		name: 'Tablet',
 		styles: {
-			width: `1024px`,
-			height: `1366px`,
+			width: `${VIEWPORTS_DIMENSIONS.Tablet.width}px`,
+			height: `${VIEWPORTS_DIMENSIONS.Tablet.height}px`,
 		},
 	},
 	Mobile: {
 		name: 'Mobile',
 		styles: {
-			width: `360px`,
-			height: `800px`,
+			width: `${VIEWPORTS_DIMENSIONS.Mobile.width}px`,
+			height: `${VIEWPORTS_DIMENSIONS.Mobile.height}px`,
 		},
 	},
 } as const
 
 export const allModes = {
-	[MY_VIEWPORTS.Mobile.name]: {
-		viewport: MY_VIEWPORTS.Mobile.name,
+	[STORYBOOK_VIEWPORTS.Mobile.name]: {
+		viewport: STORYBOOK_VIEWPORTS.Mobile.name,
 	},
-	[MY_VIEWPORTS.Tablet.name]: {
-		viewport: MY_VIEWPORTS.Tablet.name,
+	[STORYBOOK_VIEWPORTS.Tablet.name]: {
+		viewport: STORYBOOK_VIEWPORTS.Tablet.name,
 	},
-	[MY_VIEWPORTS.Desktop.name]: {
-		viewport: MY_VIEWPORTS.Desktop.name,
+	[STORYBOOK_VIEWPORTS.Desktop.name]: {
+		viewport: STORYBOOK_VIEWPORTS.Desktop.name,
 	},
 } as const
 

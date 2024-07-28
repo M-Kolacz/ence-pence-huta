@@ -1,0 +1,133 @@
+name: 👷 Pull request workflow
+on:
+  pull_request: { branches: '*' }
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  lint:
+    name: ⬣ ESLint
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🖼 Build icons
+        run: npm run build:icons
+
+      - name: 🔬 Lint
+        run: npm run lint
+
+  typecheck:
+    name: ʦ TypeScript
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🖼 Build icons
+        run: npm run build:icons
+
+      - name: 🔎 Type check
+        run: npm run typecheck --if-present
+
+  vitest:
+    name: ⚡ Vitest
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🏄 Copy test env vars
+        run: cp .env.example .env
+
+      - name: 🖼 Build icons
+        run: npm run build:icons
+
+      - name: ⚡ Run vitest
+        run: npm run test -- --coverage
+
+  storybook:
+    name: 🔬 Storybook - components tests
+    runs-on: ubuntu-22.04
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 📥 Install Playwright Browsers
+        run: npm run test:e2e:install
+
+      - name: 🏄 Copy test env vars
+        run: cp .env.example .env
+
+      - name: 🖼 Build icons
+        run: npm run build:icons
+
+      - name: 🔬 Run component tests
+        run: npm run test:storybook-ci
+
+  chromatic:
+    name: 🚀 Deploy to Chromatic
+    runs-on: ubuntu-22.04
+    needs: [lint, typecheck, vitest, storybook]
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 😀 Build Icons
+        run: npm run build:icons
+
+      - name: 🚀 Deploy to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: build:storybook
