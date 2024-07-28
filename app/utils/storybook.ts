@@ -5,7 +5,7 @@ import {
 } from '@storybook/react'
 import { type Store_CSFExports } from '@storybook/types'
 import { type ComponentType, type ComponentProps } from 'react'
-import { type MY_VIEWPORTS, allModes } from '../../.storybook/modes.ts'
+import { type STORYBOOK_VIEWPORTS, allModes } from '../../.storybook/modes.ts'
 
 export const getStoriesTestCases = (
 	stories: Store_CSFExports<ReactRenderer, any>,
@@ -32,7 +32,7 @@ export const disableControls = <Component extends ComponentType<any>>(
 	return disabledOptions
 }
 
-export const setViewport = (device: keyof typeof MY_VIEWPORTS) => ({
+export const setViewport = (device: keyof typeof STORYBOOK_VIEWPORTS) => ({
 	viewport: {
 		defaultViewport: device,
 	},
