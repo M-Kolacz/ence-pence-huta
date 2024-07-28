@@ -21,7 +21,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -42,7 +42,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -63,7 +63,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -87,7 +87,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -118,7 +118,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1

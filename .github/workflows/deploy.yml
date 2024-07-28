@@ -25,14 +25,6 @@ jobs:
         with:
           fetch-depth: '50'
 
-      - name: 👀 Read app name
-        uses: SebRollen/toml-action@v1.2.0
-        id: app_name
-        with:
-          file: 'fly.toml'
-          field: 'app'
-
-      # move Dockerfile to root
       - name: 🚚 Move Dockerfile
         run: |
           mv ./other/Dockerfile ./Dockerfile
@@ -42,7 +34,6 @@ jobs:
         uses: superfly/flyctl-actions/setup-flyctl@1.5
 
       - name: 🚀 Deploy Production
-        if: ${{ github.ref == 'refs/heads/master' }}
         run:
           flyctl deploy --remote-only --build-arg COMMIT_SHA=${{ github.sha }}
           --build-secret SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
