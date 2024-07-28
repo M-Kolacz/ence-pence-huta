@@ -42,10 +42,6 @@ export const Component: Story = {
 	},
 }
 
-export const Test1: Story = {
-	name: '↪️ Test1 ',
-}
-
 export const IconButton: Story = {
 	args: {
 		variant: 'outline',
