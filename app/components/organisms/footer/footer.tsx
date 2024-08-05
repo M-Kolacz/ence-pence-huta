@@ -5,7 +5,7 @@ import Logo from '../../Logo.svg'
 
 export const Footer = () => {
 	return (
-		<footer className="flex flex-col justify-center gap-6 md:flex-row md:flex-wrap">
+		<footer className="col-span-full flex flex-col justify-center gap-6 md:flex-row md:flex-wrap">
 			<div className="flex flex-col items-center gap-6 md:basis-full md:flex-row md:justify-between">
 				<img
 					src={Logo}

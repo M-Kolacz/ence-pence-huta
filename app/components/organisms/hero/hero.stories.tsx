@@ -1,15 +1,15 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { App } from '#app/components/templates'
+import { App, Main } from '#app/components/templates'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
-import { Footer } from './footer.tsx'
+import { Hero } from './hero.tsx'
 
 const meta = {
-	title: '🦠 Organisms/Footer',
-	component: Footer,
+	title: '🦠 Organisms/Hero',
+	component: Hero,
 	parameters: {
 		layout: 'fullscreen',
 		...setDesignPreview(
-			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=222-1659&t=1zUiTMlrtdfwd4MW-4',
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=237-1388&t=GQLL9YfZgeWcKaym-4',
 		),
 	},
 	args: {},
@@ -17,11 +17,13 @@ const meta = {
 	decorators: [
 		Story => (
 			<App>
-				<Story />
+				<Main>
+					<Story />
+				</Main>
 			</App>
 		),
 	],
-} satisfies Meta<typeof Footer>
+} satisfies Meta<typeof Hero>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -1,5 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { userEvent, within, screen, logRoles } from '@storybook/test'
+import { userEvent, within, screen } from '@storybook/test'
+import { App } from '#app/components/templates'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Header } from './header.tsx'
 
@@ -16,9 +17,9 @@ const meta = {
 	argTypes: {},
 	decorators: [
 		Story => (
-			<div className="p-app">
+			<App>
 				<Story />
-			</div>
+			</App>
 		),
 	],
 } satisfies Meta<typeof Header>
@@ -43,7 +44,7 @@ export const MobileOpen: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		logRoles(canvasElement)
+
 		const menuButton = await canvas.findByRole('button', { expanded: false })
 
 		userEvent.click(menuButton)
