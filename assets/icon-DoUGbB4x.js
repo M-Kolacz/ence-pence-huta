@@ -3,4 +3,4 @@ align vertically with neighboring text, you can pass the text as a child of
 the icon and it will be automatically aligned.
 Alternatively, if you're not ok with the icon being to the left of the text,
 you need to wrap the icon and text in a common parent and set the parent to
-display "flex" (or "inline-flex") with "items-center" and a reasonable gap.`,methods:[],displayName:"Icon",props:{name:{required:!0,tsType:{name:"unknown[number]",raw:"(typeof iconNames)[number]"},description:""},title:{required:!1,tsType:{name:"string"},description:"Pass `title` prop to the `Icon` component to get `<title>` element rendered\nin the SVG container, providing this way for accessibility."}}};export{s as I};
+display "flex" (or "inline-flex") with "items-center" and a reasonable gap.`,methods:[],displayName:"Icon",props:{name:{required:!0,tsType:{name:"iconNames[number]",raw:"typeof iconNames[number]"},description:""},title:{required:!1,tsType:{name:"string"},description:"Pass `title` prop to the `Icon` component to get `<title>` element rendered\nin the SVG container, providing this way for accessibility."}}};export{s as I};
