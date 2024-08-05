@@ -35,6 +35,11 @@ export const extendedTheme = {
 			DEFAULT: 'hsl(var(--card))',
 			foreground: 'hsl(var(--card-foreground))',
 		},
+		text: {
+			DEFAULT: 'hsl(var(--text))',
+			foreground: 'hsl(var(--text-foreground))',
+			inactive: 'hsl(var(--text-inactive))',
+		},
 	},
 	borderRadius: {
 		lg: `var(--radius)`,
@@ -59,6 +64,10 @@ export const extendedTheme = {
 
 	spacing: {
 		app: 'var(--spacing-app)',
+		section: 'var(--spacing-section)',
+		subtle: 'var(--spacing-subtle)',
+		base: 'var(--spacing-base)',
+		strong: 'var(--spacing-strong)',
 	},
 	backgroundColor: {
 		subtle: 'var(--bg-subtle)',
@@ -70,35 +79,35 @@ export const extendedTheme = {
 			'var(--text-h1)',
 			{
 				lineHeight: 'var(--line-h1)',
-				fontWeight: 'var(--weight-headings)',
+				fontWeight: 700,
 			},
 		],
 		h2: [
 			'var(--text-h2)',
 			{
 				lineHeight: 'var(--line-h2)',
-				fontWeight: 'var(--weight-headings)',
+				fontWeight: 700,
 			},
 		],
 		p1: [
 			'var(--text-p1)',
 			{
 				lineHeight: 'var(--line-p1)',
-				fontWeight: 'var(--weight-paragraphs)',
+				fontWeight: 400,
 			},
 		],
 		p5: [
 			'var(--text-p5)',
 			{
 				lineHeight: 'var(--line-p5)',
-				fontWeight: 'var(--weight-paragraphs)',
+				fontWeight: 400,
 			},
 		],
 		b1: [
 			'var(--text-b1)',
 			{
 				lineHeight: 'var(--line-b1)',
-				fontWeight: 'var(--weight-buttons)',
+				fontWeight: 500,
 			},
 		],
 	},

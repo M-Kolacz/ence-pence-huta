@@ -17,7 +17,7 @@ export const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
-		<header className="flex items-center justify-between">
+		<header className="col-span-full flex items-center justify-between">
 			<img
 				src={Logo}
 				alt="Ence Pence Nowa Huta"

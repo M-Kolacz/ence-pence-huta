@@ -24,11 +24,17 @@
 		--input: 214.3 31.8% 91.4%;
 		--ring: 221.2 83.2% 53.3%;
 		--radius: 0.5rem;
+		--text: 229 84% 5%;
+		--text-foreground: 215 19% 35%;
+		--text-inactive: 215 16% 47%;
 
-		--spacing-app: theme(spacing[4]);
+		--spacing-app: theme(spacing[6]);
+		--spacing-section: theme(spacing[16]);
+		--spacing-subtle: theme(spacing[3]);
+		--spacing-base: theme(spacing[4]);
+		--spacing-strong: theme(spacing[6]);
 
 		/* OLD */
-
 		--text-subtle: theme(colors.neutral[600]);
 		--text-strong: theme(colors.neutral[950]);
 		--text-inactive: theme(colors.neutral[500]);
@@ -56,15 +62,20 @@
 		--text-b1: theme(fontSize[base]);
 
 		--line-h1: theme(lineHeight[5xl]);
-		--line-h2: theme(fontSize[3xl]);
-		--line-p1: theme(fontSize[xl]);
-		--line-p5: theme(fontSize[xs]);
-		--line-b1: theme(fontSize[base]);
+		--line-h2: theme(lineHeight[3xl]);
+		--line-p1: theme(lineHeight[xl]);
+		--line-p5: theme(lineHeight[xs]);
+		--line-b1: theme(lineHeight[base]);
 	}
 
 	@media screen(md) {
 		:root {
-			--spacing-app: theme(spacing[6]);
+			--spacing-app: theme(spacing[8]);
+			--spacing-section: theme(spacing[24]);
+			--spacing-subtle: theme(spacing[4]);
+			--spacing-base: theme(spacing[6]);
+			--spacing-strong: theme(spacing[8]);
+
 			/* OLD */
 			--text-h1: theme(fontSize[6xl]);
 			--text-h2: theme(fontSize[4xl]);
@@ -73,16 +84,20 @@
 			--text-b1: theme(fontSize[base]);
 
 			--line-h1: theme(lineHeight[6xl]);
-			--line-h2: theme(fontSize[4xl]);
-			--line-p1: theme(fontSize[xl]);
-			--line-p5: theme(fontSize[xs]);
-			--line-b1: theme(fontSize[base]);
+			--line-h2: theme(lineHeight[4xl]);
+			--line-p1: theme(lineHeight[xl]);
+			--line-p5: theme(lineHeight[xs]);
+			--line-b1: theme(lineHeight[base]);
 		}
 	}
 
-	@media screen(lg) {
+	@media screen(xl) {
 		:root {
-			--spacing-app: theme(spacing[8]);
+			--spacing-app: theme(spacing[16]);
+			--spacing-section: theme(spacing[32]);
+			--spacing-subtle: theme(spacing[6]);
+			--spacing-base: theme(spacing[9]);
+			--spacing-strong: theme(spacing[12]);
 			/* OLD */
 			--text-h1: theme(fontSize[7xl]);
 			--text-h2: theme(fontSize[5xl]);
@@ -91,10 +106,10 @@
 			--text-b1: theme(fontSize[base]);
 
 			--line-h1: theme(lineHeight[7xl]);
-			--line-h2: theme(fontSize[5xl]);
-			--line-p1: theme(fontSize[xl]);
-			--line-p5: theme(fontSize[xs]);
-			--line-b1: theme(fontSize[base]);
+			--line-h2: theme(lineHeight[5xl]);
+			--line-p1: theme(lineHeight[xl]);
+			--line-p5: theme(lineHeight[xs]);
+			--line-b1: theme(lineHeight[base]);
 		}
 	}
 
@@ -118,5 +133,8 @@
 		--border: 217.2 32.6% 17.5%;
 		--input: 217.2 32.6% 17.5%;
 		--ring: 224.3 76.3% 48%;
+		--text: 229 84% 5%;
+		--text-foreground: 215 19% 35%;
+		--text-inactive: 215 16% 47%;
 	}
 }

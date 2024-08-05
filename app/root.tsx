@@ -17,7 +17,11 @@ import { withSentry } from '@sentry/remix'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
 import { href as iconsHref } from './components/atoms/icon/icon.tsx'
 import { Footer, Header } from './components/organisms'
-import { GeneralErrorBoundary } from './components/templates'
+import {
+	App as AppTemplate,
+	Main,
+	GeneralErrorBoundary,
+} from './components/templates'
 import fontStyleSheetUrl from './styles/font.css?url'
 import tailwindStyleSheetUrl from './styles/tailwind.css?url'
 import { ClientHintCheck, getHints } from './utils/client-hints.tsx'
@@ -145,13 +149,13 @@ function App() {
 
 	return (
 		<Document nonce={nonce} allowIndexing={allowIndexing} env={data.ENV}>
-			<div className="p-app">
+			<AppTemplate>
 				<Header />
-				<main>
+				<Main>
 					<Outlet />
-				</main>
+				</Main>
 				<Footer />
-			</div>
+			</AppTemplate>
 		</Document>
 	)
 }
