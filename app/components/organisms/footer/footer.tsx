@@ -5,15 +5,15 @@ import Logo from '../../Logo.svg'
 
 export const Footer = () => {
 	return (
-		<footer className="col-span-full flex flex-col justify-center gap-6 md:flex-row md:flex-wrap">
-			<div className="flex flex-col items-center gap-6 md:basis-full md:flex-row md:justify-between">
+		<footer className="col-span-full flex flex-col justify-center gap-strong md:flex-row md:flex-wrap">
+			<div className="flex flex-col items-center gap-base md:basis-full md:flex-row md:justify-between">
 				<img
 					src={Logo}
 					alt="Żłobek Ence Pence Nowa Huta"
 					className="h-[80px] w-[100px] md:h-[121px] md:w-[150px]"
 				/>
 				<nav>
-					<ul className="flex flex-wrap items-center justify-evenly gap-6">
+					<ul className="flex flex-wrap items-center justify-evenly gap-strong">
 						{navigationLinks
 							.filter(link => link.to !== '/galeria')
 							.map(link => {
@@ -27,7 +27,7 @@ export const Footer = () => {
 									)
 
 								return (
-									<li key={link.to}>
+									<li key={link.to} className="px-2 py-4">
 										<NavigationLink to={link.to}>
 											{link.children}
 										</NavigationLink>
@@ -36,7 +36,7 @@ export const Footer = () => {
 							})}
 					</ul>
 				</nav>
-				<div className="flex gap-4">
+				<div className="flex gap-subtle">
 					<Button size="icon" variant="outline" title="Galeria">
 						<Icon name="image" />
 					</Button>
