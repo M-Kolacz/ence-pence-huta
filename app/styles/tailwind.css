@@ -25,8 +25,8 @@
 		--ring: 221.2 83.2% 53.3%;
 		--radius: 0.5rem;
 		--text: 229 84% 5%;
-		--text-foreground: 215 19% 35%;
-		--text-inactive: 215 16% 47%;
+		--text-subtle: 215 19% 35% --text-inactive: 215 16% 47%;
+		--text-foreground: 0 0% 100%;
 
 		--spacing-app: theme(spacing[6]);
 		--spacing-section: theme(spacing[16]);

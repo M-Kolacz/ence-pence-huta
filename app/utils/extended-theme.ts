@@ -39,6 +39,7 @@ export const extendedTheme = {
 			DEFAULT: 'hsl(var(--text))',
 			foreground: 'hsl(var(--text-foreground))',
 			inactive: 'hsl(var(--text-inactive))',
+			subtle: 'hsl(var(--text-subtle))',
 		},
 	},
 	borderRadius: {

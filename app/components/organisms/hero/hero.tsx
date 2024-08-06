@@ -16,7 +16,7 @@ export const Hero = () => {
 						<span className="block">Ence-Pence</span>
 						<span className="block">Nowa Huta</span>
 					</h1>
-					<p className="max-w-prose text-p1 text-text-foreground">
+					<p className="text-text-subtle max-w-prose text-p1">
 						Naszym celem jest zapewnienie dziecku opieki, wszechstronnej
 						edukacji i rozwoju oraz bezpiecznej i mądrej zabawy pod okiem
 						profesjonalnej kadry.
