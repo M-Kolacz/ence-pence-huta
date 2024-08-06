@@ -49,7 +49,7 @@ export const variants = cva(
 		'justify-center',
 		'whitespace-nowrap',
 		'rounded-md',
-		'text-sm',
+		'text-b2',
 		'font-medium',
 		'ring-offset-background',
 		'transition-colors',
