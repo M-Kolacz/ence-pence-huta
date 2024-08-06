@@ -35,7 +35,7 @@ export const Header = () => {
 					</Button>
 				</DrawerTrigger>
 
-				<DrawerContent className="flex flex-col gap-6 p-app outline-none">
+				<DrawerContent className="flex flex-col gap-section p-app outline-none">
 					<DrawerHeader className="flex items-center justify-between">
 						<img
 							src={Logo}
@@ -49,7 +49,7 @@ export const Header = () => {
 						</DrawerClose>
 					</DrawerHeader>
 
-					<ul className="flex flex-col gap-6">
+					<ul className="flex flex-col gap-base">
 						{navigationLinks.map(link => (
 							<li key={link.to} className="w-full">
 								<Button
@@ -66,7 +66,7 @@ export const Header = () => {
 			</Drawer>
 
 			<nav className="hidden md:block">
-				<ul className="list-none gap-6 md:flex">
+				<ul className="list-none gap-subtle md:flex">
 					{navigationLinks
 						.filter(link => link.to !== '/galeria')
 						.map(link => {
