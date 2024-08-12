@@ -15,7 +15,14 @@ const preview: Preview = {
 		},
 		options: {
 			storySort: {
-				order: ['⚛️ Atoms', 'Molecules', '🦠 Organisms', 'Templates', 'Pages'],
+				order: [
+					'⚛️ Atoms',
+					'🧬 Molecules',
+					'🦠 Organisms',
+					'Templates',
+					'Pages',
+					'Tokens',
+				],
 			},
 		},
 	},

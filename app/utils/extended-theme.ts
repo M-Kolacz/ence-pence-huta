@@ -39,6 +39,7 @@ export const extendedTheme = {
 			DEFAULT: 'hsl(var(--text))',
 			foreground: 'hsl(var(--text-foreground))',
 			inactive: 'hsl(var(--text-inactive))',
+			subtle: 'hsl(var(--text-subtle))',
 		},
 	},
 	borderRadius: {
@@ -96,6 +97,27 @@ export const extendedTheme = {
 				fontWeight: 400,
 			},
 		],
+		p2: [
+			'var(--text-p2)',
+			{
+				lineHeight: 'var(--line-p2)',
+				fontWeight: 400,
+			},
+		],
+		p3: [
+			'var(--text-p3)',
+			{
+				lineHeight: 'var(--line-p3)',
+				fontWeight: 400,
+			},
+		],
+		p4: [
+			'var(--text-p4)',
+			{
+				lineHeight: 'var(--line-p4)',
+				fontWeight: 400,
+			},
+		],
 		p5: [
 			'var(--text-p5)',
 			{
@@ -107,6 +129,13 @@ export const extendedTheme = {
 			'var(--text-b1)',
 			{
 				lineHeight: 'var(--line-b1)',
+				fontWeight: 500,
+			},
+		],
+		b2: [
+			'var(--text-b2)',
+			{
+				lineHeight: 'var(--line-b2)',
 				fontWeight: 500,
 			},
 		],
