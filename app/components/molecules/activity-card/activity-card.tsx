@@ -17,8 +17,6 @@ export const ActivityCard = ({
 		<div className={cn(variants({ variant, className }))} {...props}>
 			<div className="flex flex-col gap-subtle px-4">
 				<p className="text-p3 text-text-foreground">
-					sieamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-					asadadas
 					{activityCardState[variant!].title}
 				</p>
 				<p className="text-p1 font-bold text-text-foreground">
