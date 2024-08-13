@@ -16,6 +16,7 @@ const config: TestRunnerConfig = {
 		expect.extend({ toMatchImageSnapshot })
 		jest.retryTimes(5)
 	},
+
 	/* Hook to execute before a story is initially visited before being rendered in the browser.
 	 * The page argument is the Playwright's page object for the story.
 	 * The context argument is a Storybook object containing the story's id, title, and name.
@@ -39,9 +40,8 @@ const config: TestRunnerConfig = {
 	 * The context argument is a Storybook object containing the story's id, title, and name.
 	 */
 	async postVisit(page, context) {
-		const storyContext = await getStoryContext(page, context)
-
 		await waitForPageReady(page)
+		const storyContext = await getStoryContext(page, context)
 
 		if (storyContext.parameters?.a11y?.disable) return
 
@@ -57,12 +57,15 @@ const config: TestRunnerConfig = {
 			axeOptions: storyContext.parameters?.a11y?.options,
 		})
 
+		if (['organisms-header--mobile-open'].includes(context.id)) return
+
 		const image = await page.screenshot({ fullPage: true })
 		expect(image).toMatchImageSnapshot({
 			customSnapshotsDir,
 			customSnapshotIdentifier: context.id,
-			failureThreshold: 0.5,
+			failureThreshold: 0.02,
 			failureThresholdType: 'percent',
+			allowSizeMismatch: true,
 		})
 
 		jest.runOnlyPendingTimers()

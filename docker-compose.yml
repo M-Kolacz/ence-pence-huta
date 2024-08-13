@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  visual-tests-storybook:
+    volumes:
+      - ./:/app/
+      - /app/node_modules
+    build: .

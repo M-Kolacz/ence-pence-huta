@@ -33,6 +33,9 @@
     "build:storybook": "storybook build",
     "test:storybook": "test-storybook",
     "test:storybook-ci": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npm run build:storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test:storybook\"",
+    "test:storybook-ci-approve": "concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npm run build:storybook --quiet && npx http-server storybook-static --port 6006 --silent\" \"wait-on tcp:6006 && npm run test:storybook -- -u\"",
+    "visual-tests": "docker-compose up",
+    "visual-tests:approve": "docker compose run visual-tests-storybook npm run test:storybook-ci-approve",
     "chromatic": "npx chromatic --build-script-name build:storybook",
     "plop": "plop"
   },
