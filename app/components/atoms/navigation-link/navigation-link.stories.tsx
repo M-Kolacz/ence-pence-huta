@@ -3,7 +3,7 @@ import { disableControls, setDesignPreview } from '#app/utils/storybook.ts'
 import { NavigationLink } from './navigation-link.tsx'
 
 const meta = {
-	title: '⚛️ Atoms/Navigation Link',
+	title: 'Atoms/Navigation Link',
 	component: NavigationLink,
 	parameters: {
 		layout: 'centered',

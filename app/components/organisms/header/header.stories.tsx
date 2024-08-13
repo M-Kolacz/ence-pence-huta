@@ -5,7 +5,7 @@ import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Header } from './header.tsx'
 
 const meta = {
-	title: '🦠 Organisms/Header',
+	title: 'Organisms/Header',
 	component: Header,
 	parameters: {
 		layout: 'fullscreen',

@@ -4,7 +4,7 @@ import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Activities } from './activities.tsx'
 
 const meta = {
-	title: '🦠 Organisms/Activities',
+	title: 'Organisms/Activities',
 	component: Activities,
 	parameters: {
 		layout: 'fullscreen',

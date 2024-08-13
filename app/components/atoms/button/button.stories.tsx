@@ -5,7 +5,7 @@ import { variations, sizes } from './button-variants.ts'
 import { Button } from './button.tsx'
 
 const meta = {
-	title: '⚛️ Atoms/Button',
+	title: 'Atoms/Button',
 	component: Button,
 	parameters: {
 		layout: 'centered',

@@ -1,12 +1,20 @@
-import { getStoryContext, type TestRunnerConfig } from '@storybook/test-runner'
+import {
+	getStoryContext,
+	type TestRunnerConfig,
+	waitForPageReady,
+} from '@storybook/test-runner'
 import { injectAxe, checkA11y, configureAxe } from 'axe-playwright'
+import { toMatchImageSnapshot } from 'jest-image-snapshot'
 import { z } from 'zod'
 import { VIEWPORTS_DIMENSIONS } from './modes'
+
+const customSnapshotsDir = `${process.cwd()}/__snapshots__`
 
 const config: TestRunnerConfig = {
 	// Hook that is executed before the test runner starts running tests
 	setup() {
-		// Add your configuration here.
+		expect.extend({ toMatchImageSnapshot })
+		jest.retryTimes(5)
 	},
 	/* Hook to execute before a story is initially visited before being rendered in the browser.
 	 * The page argument is the Playwright's page object for the story.
@@ -14,6 +22,7 @@ const config: TestRunnerConfig = {
 	 */
 	async preVisit(page, story) {
 		await injectAxe(page)
+		jest.useFakeTimers()
 
 		const storyContext = await getStoryContext(page, story)
 		const viewportName = z
@@ -32,6 +41,8 @@ const config: TestRunnerConfig = {
 	async postVisit(page, context) {
 		const storyContext = await getStoryContext(page, context)
 
+		await waitForPageReady(page)
+
 		if (storyContext.parameters?.a11y?.disable) return
 
 		await configureAxe(page, {
@@ -45,6 +56,17 @@ const config: TestRunnerConfig = {
 			},
 			axeOptions: storyContext.parameters?.a11y?.options,
 		})
+
+		const image = await page.screenshot({ fullPage: true })
+		expect(image).toMatchImageSnapshot({
+			customSnapshotsDir,
+			customSnapshotIdentifier: context.id,
+			failureThreshold: 0.5,
+			failureThresholdType: 'percent',
+		})
+
+		jest.runOnlyPendingTimers()
+		jest.useRealTimers()
 	},
 }
 
