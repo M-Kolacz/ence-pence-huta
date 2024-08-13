@@ -80,6 +80,8 @@ jobs:
   storybook:
     name: 🔬 Storybook - components tests
     runs-on: ubuntu-22.04
+    container:
+      image: mcr.microsoft.com/playwright
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
