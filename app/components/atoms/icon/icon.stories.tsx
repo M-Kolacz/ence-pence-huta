@@ -4,7 +4,7 @@ import { Icon } from './icon.tsx'
 import { iconNames } from './icons/name.ts'
 
 const meta = {
-	title: '⚛️ Atoms/Icon',
+	title: 'Atoms/Icon',
 	component: Icon,
 	parameters: {
 		layout: 'centered',

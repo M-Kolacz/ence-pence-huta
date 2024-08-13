@@ -4,7 +4,7 @@ import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Footer } from './footer.tsx'
 
 const meta = {
-	title: '🦠 Organisms/Footer',
+	title: 'Organisms/Footer',
 	component: Footer,
 	parameters: {
 		layout: 'fullscreen',

@@ -4,7 +4,7 @@ import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
 import { Hero } from './hero.tsx'
 
 const meta = {
-	title: '🦠 Organisms/Hero',
+	title: 'Organisms/Hero',
 	component: Hero,
 	parameters: {
 		layout: 'fullscreen',

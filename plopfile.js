@@ -1,5 +1,5 @@
 export default function (plop) {
-	plop.setGenerator('⚛️  Atom', {
+	plop.setGenerator(' Atom', {
 		description: 'A generator for atom component',
 		prompts: [
 			{

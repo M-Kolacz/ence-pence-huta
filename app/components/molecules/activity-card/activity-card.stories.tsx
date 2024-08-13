@@ -4,7 +4,7 @@ import { ActivityCard } from './activity-card.tsx'
 import { variations } from './activity-card.variants.ts'
 
 const meta = {
-	title: '🧬 Molecules/ActivityCard',
+	title: 'Molecules/ActivityCard',
 	component: ActivityCard,
 	parameters: {
 		layout: 'centered',
