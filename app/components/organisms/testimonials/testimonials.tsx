@@ -14,6 +14,7 @@ import {
 } from '#app/components/molecules'
 import { Section } from '#app/components/templates'
 import commentsSrc from './comments.png'
+import { testimonials } from './testimonials.helpers.ts'
 
 export const Testimonials = () => {
 	return (
@@ -31,25 +32,25 @@ export const Testimonials = () => {
 				className="max-w-prose"
 			>
 				<CarouselContent>
-					{Array.from({ length: 5 }).map((_, index) => (
-						<CarouselItem
-							key={index}
-							className="flex basis-full flex-col items-center gap-subtle"
-						>
-							<p className="max-w-prose text-center text-p1 text-text-subtle">
-								Serdecznie dziękujemy wszystkim opiekunkom za wspaniałą opiekę
-								nad Krzysiem, za pomoc w jego wszechstronnym rozwoju i okazane
-								mu ciepło i za to, że was tak polubił!
-							</p>
-							<AvatarRoot>
-								<AvatarImg src="/img/parents/1.svg" alt="" />
-								<AvatarTextRoot>
-									<AvatarTitle>Patrycja</AvatarTitle>
-									<AvatarCaption>Mama Łucji</AvatarCaption>
-								</AvatarTextRoot>
-							</AvatarRoot>
-						</CarouselItem>
-					))}
+					{testimonials.map(
+						({ avatarCaption, avatarTitle, description, src }) => (
+							<CarouselItem
+								key={src}
+								className="flex basis-full flex-col items-center gap-subtle"
+							>
+								<p className="max-w-prose text-center text-p1 text-text-subtle">
+									{description}
+								</p>
+								<AvatarRoot>
+									<AvatarImg src={src} alt="" />
+									<AvatarTextRoot>
+										<AvatarTitle>{avatarTitle}</AvatarTitle>
+										<AvatarCaption>{avatarCaption}</AvatarCaption>
+									</AvatarTextRoot>
+								</AvatarRoot>
+							</CarouselItem>
+						),
+					)}
 				</CarouselContent>
 				<CarouselPrevious />
 				<CarouselNext />
