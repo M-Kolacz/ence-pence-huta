@@ -1,3 +1,4 @@
+import { EmblaOptionsType, type EmblaCarouselType } from 'embla-carousel'
 import useEmblaCarousel, {
 	type UseEmblaCarouselType,
 } from 'embla-carousel-react'
@@ -12,8 +13,9 @@ import {
 	type ComponentProps,
 	type KeyboardEvent,
 } from 'react'
-import { Button } from '#app/components/atoms'
+import { Button, Dot } from '#app/components/atoms'
 import { cn } from '#app/utils/misc.tsx'
+import { useDotButton } from './carousel.helpers'
 import nextSrc from './next.png'
 import prevSrc from './prev.png'
 
@@ -210,8 +212,8 @@ const CarouselPrevious = forwardRef<
 	return (
 		<Button
 			ref={ref}
-			variant="outline"
-			size="icon"
+			variant={variant}
+			size={size}
 			className={cn(
 				'absolute h-12 w-12',
 				orientation === 'horizontal'
@@ -224,7 +226,7 @@ const CarouselPrevious = forwardRef<
 			{...props}
 		>
 			<img src={prevSrc} alt="" className="h-6 w-6" />
-			<span className="sr-only">Previous slide</span>
+			<span className="sr-only">Poprzednia opinia</span>
 		</Button>
 	)
 })
@@ -253,11 +255,41 @@ const CarouselNext = forwardRef<
 			{...props}
 		>
 			<img src={nextSrc} alt="" className="h-6 w-6" />
-			<span className="sr-only">Next slide</span>
+			<span className="sr-only">Następna opinia</span>
 		</Button>
 	)
 })
 CarouselNext.displayName = 'CarouselNext'
+
+type CarouselDotProps = ComponentProps<'button'> & { index: number }
+const CarouselDot = ({ index, ...props }: CarouselDotProps) => {
+	const { api } = useCarousel()
+
+	const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
+		const autoplay = emblaApi?.plugins()?.autoplay
+		if (!autoplay) return
+
+		const resetOrStop =
+			autoplay.options.stopOnInteraction === false
+				? autoplay.reset
+				: autoplay.stop
+
+		resetOrStop()
+	}, [])
+
+	const { onDotButtonClick, selectedIndex } = useDotButton(
+		api,
+		onNavButtonClick,
+	)
+
+	return (
+		<Dot
+			isActive={selectedIndex === index}
+			onClick={() => onDotButtonClick(index)}
+			{...props}
+		/>
+	)
+}
 
 export {
 	type CarouselApi,
@@ -266,4 +298,5 @@ export {
 	CarouselItem,
 	CarouselPrevious,
 	CarouselNext,
+	CarouselDot,
 }

@@ -34,4 +34,4 @@ export const testimonials = [
 		avatarTitle: 'Łukasz',
 		avatarCaption: 'Tata Jasia',
 	},
-]
+] as const
