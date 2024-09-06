@@ -1,0 +1,1 @@
+import{j as p}from"./jsx-runtime-CGpYA4L6.js";import{c as r}from"./misc-DsGL97bO.js";const a=({className:o,...s})=>p.jsx("div",{className:r("mx-auto grid max-w-[1920px] grid-cols-1 grid-rows-[auto_1fr_auto] gap-y-section p-app lg:grid-cols-12",o),...s});a.__docgenInfo={description:"",methods:[],displayName:"App"};export{a as A};
