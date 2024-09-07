@@ -1,6 +1,6 @@
 import { cn } from '#app/utils/misc.tsx'
 import { motion, AnimatePresence } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, ReactNode } from 'react'
 
 export const ImagesSlider = ({
 	images,
@@ -12,8 +12,8 @@ export const ImagesSlider = ({
 	direction = 'up',
 }: {
 	images: string[]
-	children: React.ReactNode
-	overlay?: React.ReactNode
+	children: ReactNode
+	overlay?: ReactNode
 	overlayClassName?: string
 	className?: string
 	autoplay?: boolean
