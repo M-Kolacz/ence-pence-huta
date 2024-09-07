@@ -1,27 +1,27 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { App } from '#app/components/templates'
+import { App, Main } from '#app/components/templates'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
-import { Gallery } from './gallery.tsx'
+import { Donation } from './donation.tsx'
 
 const meta = {
-	title: 'Organisms/Gallery',
-	component: Gallery,
+	title: 'Organisms/Donation',
+	component: Donation,
 	parameters: {
 		layout: 'fullscreen',
 		...setDesignPreview(
-			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=327-4859&t=GhlP2VAdQe4cmQbA-4',
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=338-11091&t=GhlP2VAdQe4cmQbA-4',
 		),
 	},
-	args: {},
-	argTypes: {},
 	decorators: [
 		(Story) => (
 			<App>
-				<Story />
+				<Main>
+					<Story />
+				</Main>
 			</App>
 		),
 	],
-} satisfies Meta<typeof Gallery>
+} satisfies Meta<typeof Donation>
 
 export default meta
 type Story = StoryObj<typeof meta>
