@@ -1,0 +1,1 @@
+import{j as i}from"./jsx-runtime-CGpYA4L6.js";import{c as o}from"./misc-opz8xCVi.js";const e=({className:r,...s})=>i.jsx("div",{className:o("h-[2px] w-full rounded-sm bg-primary-100",r),...s});e.__docgenInfo={description:"",methods:[],displayName:"Divider"};export{e as D};
