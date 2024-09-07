@@ -90,6 +90,13 @@ export const extendedTheme = {
 				fontWeight: 700,
 			},
 		],
+		h3: [
+			'var(--text-h3)',
+			{
+				lineHeight: 'var(--line-h3)',
+				fontWeight: 700,
+			},
+		],
 		p1: [
 			'var(--text-p1)',
 			{

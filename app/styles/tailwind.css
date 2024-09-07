@@ -37,6 +37,7 @@
 
 		--text-h1: theme(fontSize[5xl]);
 		--text-h2: theme(fontSize[3xl]);
+		--text-h3: theme(fontSize[2xl]);
 		--text-p1: theme(fontSize[xl]);
 		--text-p2: theme(fontSize[lg]);
 		--text-p3: theme(fontSize[base]);
@@ -47,6 +48,7 @@
 
 		--line-h1: theme(lineHeight[5xl]);
 		--line-h2: theme(lineHeight[3xl]);
+		--line-h3: theme(lineHeight[2xl]);
 		--line-p1: theme(lineHeight[xl]);
 		--line-p2: theme(lineHeight[lg]);
 		--line-p3: theme(lineHeight[base]);
@@ -79,8 +81,10 @@
 
 			--text-h1: theme(fontSize[6xl]);
 			--text-h2: theme(fontSize[4xl]);
+			--text-h3: theme(fontSize[3xl]);
 			--line-h1: theme(lineHeight[6xl]);
 			--line-h2: theme(lineHeight[4xl]);
+			--line-h3: theme(lineHeight[3xl]);
 		}
 	}
 
@@ -94,8 +98,10 @@
 
 			--text-h1: theme(fontSize[7xl]);
 			--text-h2: theme(fontSize[5xl]);
+			--text-h3: theme(fontSize[4xl]);
 			--line-h1: theme(lineHeight[7xl]);
 			--line-h2: theme(lineHeight[5xl]);
+			--line-h3: theme(lineHeight[4xl]);
 		}
 	}
 }
