@@ -30,7 +30,7 @@ const config: TestRunnerConfig = {
 			.enum(['Desktop', 'Tablet', 'Mobile'])
 			.parse(storyContext.parameters?.viewport?.defaultViewport)
 
-		page.setViewportSize({
+		await page.setViewportSize({
 			width: VIEWPORTS_DIMENSIONS[viewportName].width,
 			height: VIEWPORTS_DIMENSIONS[viewportName].height,
 		})
