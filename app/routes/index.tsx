@@ -4,6 +4,7 @@ import {
 	Activities,
 	Testimonials,
 	Gallery,
+	OurApproach,
 } from '#app/components/organisms'
 
 export const meta: MetaFunction = () => [{ title: 'Epic Notes' }]
@@ -13,6 +14,7 @@ export default function Index() {
 		<>
 			<Hero />
 			<Activities />
+			<OurApproach />
 			<Testimonials />
 			<Gallery />
 		</>

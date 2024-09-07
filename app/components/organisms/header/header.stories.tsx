@@ -47,7 +47,7 @@ export const MobileOpen: Story = {
 
 		const menuButton = await canvas.findByRole('button', { expanded: false })
 
-		userEvent.click(menuButton)
+		await userEvent.click(menuButton)
 
 		const dialog = within(await screen.findByRole('dialog'))
 

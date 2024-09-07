@@ -1,6 +1,6 @@
-import { cn } from '#app/utils/misc.tsx'
 import { motion, AnimatePresence } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode, useCallback } from 'react'
+import { cn } from '#app/utils/misc.tsx'
 
 export const ImagesSlider = ({
 	images,
@@ -12,34 +12,29 @@ export const ImagesSlider = ({
 	direction = 'up',
 }: {
 	images: string[]
-	children: React.ReactNode
-	overlay?: React.ReactNode
+	children: ReactNode
+	overlay?: ReactNode
 	overlayClassName?: string
 	className?: string
 	autoplay?: boolean
 	direction?: 'up' | 'down'
 }) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
-	const [loading, setLoading] = useState(false)
+	const [ignored, setLoading] = useState(false)
 	const [loadedImages, setLoadedImages] = useState<string[]>([])
 
-	const handleNext = () => {
+	const handleNext = useCallback(() => {
 		setCurrentIndex(prevIndex =>
 			prevIndex + 1 === images.length ? 0 : prevIndex + 1,
 		)
-	}
+	}, [images.length])
 
-	const handlePrevious = () => {
+	const handlePrevious = useCallback(() => {
 		setCurrentIndex(prevIndex =>
 			prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1,
 		)
-	}
-
-	useEffect(() => {
-		loadImages()
-	}, [])
-
-	const loadImages = () => {
+	}, [images.length])
+	const loadImages = useCallback(() => {
 		setLoading(true)
 		const loadPromises = images.map(image => {
 			return new Promise((resolve, reject) => {
@@ -56,7 +51,12 @@ export const ImagesSlider = ({
 				setLoading(false)
 			})
 			.catch(error => console.error('Failed to load images', error))
-	}
+	}, [images])
+
+	useEffect(() => {
+		loadImages()
+	}, [loadImages])
+
 	useEffect(() => {
 		const handleKeyDown = (event: KeyboardEvent) => {
 			if (event.key === 'ArrowRight') {
@@ -80,7 +80,7 @@ export const ImagesSlider = ({
 			window.removeEventListener('keydown', handleKeyDown)
 			clearInterval(interval)
 		}
-	}, [])
+	}, [autoplay, handleNext, handlePrevious])
 
 	const slideVariants = {
 		initial: {
