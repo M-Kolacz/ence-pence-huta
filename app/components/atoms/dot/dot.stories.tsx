@@ -13,8 +13,12 @@ const meta = {
 	},
 	args: {
 		isActive: false,
+		'aria-label': 'Dot',
 	},
 	tags: ['autodocs'],
+	argTypes: {
+		...disableControls<typeof Dot>(['aria-label']),
+	},
 } satisfies Meta<typeof Dot>
 
 export default meta
@@ -23,11 +27,11 @@ type Story = StoryObj<typeof meta>
 export const Component: Story = {}
 
 export const States: Story = {
-	render: () => {
+	render: args => {
 		return (
 			<div className="flex space-x-4">
-				<Dot />
-				<Dot isActive />
+				<Dot {...args} />
+				<Dot {...args} isActive />
 			</div>
 		)
 	},
