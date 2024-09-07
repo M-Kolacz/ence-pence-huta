@@ -12,11 +12,11 @@ export const Footer = () => {
 					alt="Żłobek Ence Pence Nowa Huta"
 					className="h-[80px] w-[100px] md:h-[121px] md:w-[150px]"
 				/>
-				<nav>
+				<nav aria-label="Dolna nawigacja strony">
 					<ul className="flex flex-wrap items-center justify-evenly gap-strong">
 						{navigationLinks
-							.filter(link => link.to !== '/galeria')
-							.map(link => {
+							.filter((link) => link.to !== '/galeria')
+							.map((link) => {
 								if (link.to === '/kontakt')
 									return (
 										<li key={link.to}>

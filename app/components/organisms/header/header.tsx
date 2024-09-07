@@ -50,7 +50,7 @@ export const Header = () => {
 					</DrawerHeader>
 
 					<ul className="flex flex-col gap-base">
-						{navigationLinks.map(link => (
+						{navigationLinks.map((link) => (
 							<li key={link.to} className="w-full">
 								<Button
 									variant="secondary"
@@ -65,11 +65,11 @@ export const Header = () => {
 				</DrawerContent>
 			</Drawer>
 
-			<nav className="hidden md:block">
+			<nav className="hidden md:block" aria-label="Nawigacja strony">
 				<ul className="list-none gap-subtle md:flex">
 					{navigationLinks
-						.filter(link => link.to !== '/galeria')
-						.map(link => {
+						.filter((link) => link.to !== '/galeria')
+						.map((link) => {
 							if (link.to === '/kontakt')
 								return (
 									<li
