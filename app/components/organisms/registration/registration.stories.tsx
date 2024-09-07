@@ -9,7 +9,7 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 		...setDesignPreview(
-			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=237-1388&t=GQLL9YfZgeWcKaym-4',
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=338-11091&t=GhlP2VAdQe4cmQbA-4',
 		),
 	},
 	decorators: [

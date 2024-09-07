@@ -1,15 +1,16 @@
 import { type Meta, type StoryObj } from '@storybook/react'
-import { App } from '#app/components/templates'
+import { Footer, Header } from '#app/components/organisms'
+import { App, Main } from '#app/components/templates'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
-import { Gallery } from './gallery.tsx'
+import News from './aktualnosci.tsx'
 
 const meta = {
-	title: 'Organisms/Gallery',
-	component: Gallery,
+	title: 'Pages/News',
+	component: News,
 	parameters: {
 		layout: 'fullscreen',
 		...setDesignPreview(
-			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=327-4859&t=GhlP2VAdQe4cmQbA-4',
+			'https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta-v2?node-id=338-6029&t=GhlP2VAdQe4cmQbA-4',
 		),
 	},
 	args: {},
@@ -17,16 +18,21 @@ const meta = {
 	decorators: [
 		(Story) => (
 			<App>
-				<Story />
+				<Header />
+				<Main>
+					<Story />
+				</Main>
+				<Footer />
 			</App>
 		),
 	],
-} satisfies Meta<typeof Gallery>
+} satisfies Meta<typeof News>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Mobile: Story = {
+	name: 'Mobile',
 	parameters: {
 		...setViewport('Mobile'),
 	},
