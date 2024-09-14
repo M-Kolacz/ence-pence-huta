@@ -17,6 +17,8 @@ const schema = z.object({
 	GITHUB_CLIENT_SECRET: z.string().default('MOCK_GITHUB_CLIENT_SECRET'),
 	GITHUB_TOKEN: z.string().default('MOCK_GITHUB_TOKEN'),
 	ALLOW_INDEXING: z.enum(['true', 'false']).optional(),
+	GOOGLE_MAP_API_KEY: z.string(),
+	GOOGLE_MAP_ID: z.string(),
 })
 
 declare global {
@@ -52,6 +54,8 @@ export function getEnv() {
 		MODE: process.env.NODE_ENV,
 		SENTRY_DSN: process.env.SENTRY_DSN,
 		ALLOW_INDEXING: process.env.ALLOW_INDEXING,
+		GOOGLE_MAP_API_KEY: process.env.GOOGLE_MAP_API_KEY,
+		GOOGLE_MAP_ID: process.env.GOOGLE_MAP_ID,
 	}
 }
 
