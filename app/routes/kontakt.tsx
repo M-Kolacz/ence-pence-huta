@@ -1,7 +1,6 @@
 import { type MetaFunction } from '@remix-run/node'
 
-import { Contact, Map } from '#app/components/organisms'
-import { ContactForm } from './resources+/contact-form.tsx'
+import { Contact, Map, ContactForm } from '#app/components/organisms'
 
 export const meta: MetaFunction = () => [{ title: 'Epic Notes' }]
 
@@ -10,7 +9,7 @@ export default function Index() {
 		<>
 			<Contact />
 			<Map />
-			<ContactForm />
+			<ContactForm className="md:-mt-[20%]" />
 		</>
 	)
 }

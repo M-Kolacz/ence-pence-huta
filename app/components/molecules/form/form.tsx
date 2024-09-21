@@ -15,7 +15,7 @@ export function ErrorList({
 	return (
 		<ul id={id} className="flex flex-col gap-1">
 			{errorsToRender.map((error) => (
-				<li key={error} className="text-foreground-destructive text-[10px]">
+				<li key={error} className="text-sm text-destructive">
 					{error}
 				</li>
 			))}
@@ -46,7 +46,7 @@ export function Field({
 				aria-describedby={errorId}
 				{...inputProps}
 			/>
-			<div className="min-h-[32px] px-4 pb-3 pt-1">
+			<div className="min-h-[40px] px-4 pb-3 pt-1">
 				{errorId ? <ErrorList id={errorId} errors={errors} /> : null}
 			</div>
 		</div>

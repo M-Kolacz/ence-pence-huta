@@ -10,7 +10,7 @@ export const Contact = () => {
 			aria-labelledby={contactTitle}
 		>
 			<h2 className="font-headings text-h2 text-text" id={contactTitle}>
-				Skontaktuj się z nami
+				Skontaktuj się z nami (popraw tytuł tutaj albo w formularzu)
 			</h2>
 			<div className="flex flex-col gap-strong md:flex-row md:items-center md:justify-between">
 				<div className="flex flex-col gap-strong">
