@@ -6,7 +6,6 @@ const position = { lat: 50.07033662490449, lng: 20.039205293759537 }
 const zoom = 18.75
 
 export const Map = () => {
-	window.ENV
 	const mapTitle = 'map-title'
 	return (
 		<Section
@@ -19,12 +18,12 @@ export const Map = () => {
 			>
 				Gdzie nas znaleźć
 			</h2>
-			<APIProvider apiKey={window.ENV.GOOGLE_MAP_API_KEY}>
+			<APIProvider apiKey={ENV.GOOGLE_MAP_API_KEY}>
 				<div className="col-span-full -mx-app h-[800px]">
 					<GoogleMap
 						defaultZoom={zoom}
 						defaultCenter={position}
-						mapId={window.ENV.GOOGLE_MAP_ID}
+						mapId={ENV.GOOGLE_MAP_ID}
 					/>
 				</div>
 			</APIProvider>

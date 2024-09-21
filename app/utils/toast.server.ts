@@ -45,6 +45,15 @@ export async function createToastHeaders(toastInput: ToastInput) {
 	return new Headers({ 'set-cookie': cookie })
 }
 
+export const createToastCookie = async (toastInput: ToastInput) => {
+	const toastSession = await toastSessionStorage.getSession()
+	const toast = ToastSchema.parse(toastInput)
+	toastSession.flash(toastKey, toast)
+	const toastCookie = await toastSessionStorage.commitSession(toastSession)
+
+	return toastCookie
+}
+
 export async function getToast(request: Request) {
 	const session = await toastSessionStorage.getSession(
 		request.headers.get('cookie'),

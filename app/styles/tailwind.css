@@ -104,4 +104,9 @@
 			--line-h3: theme(lineHeight[4xl]);
 		}
 	}
+
+	[data-icon] {
+		width: 24px;
+		height: 24px;
+	}
 }

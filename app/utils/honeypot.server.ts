@@ -10,6 +10,7 @@ export function checkHoneypot(formData: FormData) {
 		honeypot.check(formData)
 	} catch (error) {
 		if (error instanceof SpamError) {
+			console.log(error)
 			throw new Response('Form not submitted properly', { status: 400 })
 		}
 		throw error
