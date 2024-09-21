@@ -15,7 +15,9 @@ import {
 } from '@remix-run/react'
 import { withSentry } from '@sentry/remix'
 import { HoneypotProvider } from 'remix-utils/honeypot/react'
+import { Toaster } from '#app/components/molecules'
 import { href as iconsHref } from './components/atoms/icon/icon.tsx'
+import { useToast } from './components/molecules/toaster/toaster.tsx'
 import { Footer, Header } from './components/organisms'
 import {
 	App as AppTemplate,
@@ -147,6 +149,8 @@ function App() {
 	const nonce = useNonce()
 	const allowIndexing = data.ENV.ALLOW_INDEXING !== 'false'
 
+	useToast(data.toast)
+
 	return (
 		<Document nonce={nonce} allowIndexing={allowIndexing} env={data.ENV}>
 			<AppTemplate>
@@ -156,6 +160,7 @@ function App() {
 				</Main>
 				<Footer />
 			</AppTemplate>
+			<Toaster />
 		</Document>
 	)
 }

@@ -19,6 +19,11 @@ const schema = z.object({
 	ALLOW_INDEXING: z.enum(['true', 'false']).optional(),
 	GOOGLE_MAP_API_KEY: z.string(),
 	GOOGLE_MAP_ID: z.string(),
+	EMAIL_SERVICE_ID: z.string(),
+	EMAIL_TEMPLATE_ID: z.string(),
+	EMAIL_USER_ID: z.string(),
+	EMAIL_ACCESS_TOKEN: z.string(),
+	EMAIL_API_PATH: z.string(),
 })
 
 declare global {
@@ -56,6 +61,11 @@ export function getEnv() {
 		ALLOW_INDEXING: process.env.ALLOW_INDEXING,
 		GOOGLE_MAP_API_KEY: process.env.GOOGLE_MAP_API_KEY,
 		GOOGLE_MAP_ID: process.env.GOOGLE_MAP_ID,
+		EMAIL_SERVICE_ID: process.env.EMAIL_SERVICE_ID,
+		EMAIL_TEMPLATE_ID: process.env.EMAIL_TEMPLATE_ID,
+		EMAIL_USER_ID: process.env.EMAIL_USER_ID,
+		EMAIL_ACCESS_TOKEN: process.env.EMAIL_ACCESS_TOKEN,
+		EMAIL_API_PATH: process.env.EMAIL_API_PATH,
 	}
 }
 
