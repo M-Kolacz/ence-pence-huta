@@ -1,0 +1,13 @@
+import{j as e}from"./jsx-runtime-CGpYA4L6.js";import{s as g,a as o}from"./storybook-fP5FfkVL.js";import{S as h}from"./main-DnU6mDru.js";import{I as w}from"./icon-Du6O1_GD.js";import{L as j}from"./link-C3J9A9bm.js";import{A as z}from"./app--kGS62sV.js";import"./index-CleY8y_P.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./entry-preview-CiarxA3d.js";import"./react-18-CzlTUK1-.js";import"./index-DMWgzpko.js";import"./modes-DycAkefs.js";import"./misc-opz8xCVi.js";const b=""+new URL("invitation-Dx2gGS9D.svg",import.meta.url).href,f=()=>{const s="invitation";return e.jsxs(h,{className:"flex flex-col gap-strong md:flex-row","aria-labelledby":s,children:[e.jsxs("div",{className:"flex flex-col gap-subtle md:justify-center",children:[e.jsx("h2",{className:"w-full max-w-prose font-headings text-h2 text-text",id:s,children:"Zapisy na rok 2024/2025"}),e.jsxs("div",{className:"flex flex-col gap-subtle",children:[e.jsx("p",{className:"max-w-prose text-p1 text-text-subtle",children:"Przyjmujemy dzieci przez cały rok (w zależności do ilości miejsc). W celu zapisu dziecka do naszego żłobka prosimy o wypełnienie i przesłanie do nas poniższych dokumentów:"}),e.jsx("ul",{children:e.jsxs("li",{className:"flex gap-2 align-middle",children:[e.jsx(w,{name:"folder",className:"h-8 w-8"}),e.jsx(j,{href:"/docs/zgłoszenie.doc",children:"Karta zgłoszenia dziecka"})]})})]})]}),e.jsx("img",{src:b,alt:"",className:"max-h-[500px] max-w-[500px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]"})]})};f.__docgenInfo={description:"",methods:[],displayName:"Invitation"};const L={title:"Organisms/Invitation",component:f,parameters:{layout:"fullscreen",...g("https://www.figma.com/file/zx5FkmiDiV7F8Jn5phnpeJ/Ence-Pence-Huta?node-id=467-1172&t=nWj3xrDFwTTZ7yj3-4")},args:{},argTypes:{},decorators:[s=>e.jsx(z,{children:e.jsx(s,{})})]},a={parameters:{...o("Mobile")}},r={parameters:{...o("Tablet")}},t={parameters:{...o("Desktop")}};var i,n,m;a.parameters={...a.parameters,docs:{...(i=a.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  parameters: {
+    ...setViewport('Mobile')
+  }
+}`,...(m=(n=a.parameters)==null?void 0:n.docs)==null?void 0:m.source}}};var p,c,l;r.parameters={...r.parameters,docs:{...(p=r.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  parameters: {
+    ...setViewport('Tablet')
+  }
+}`,...(l=(c=r.parameters)==null?void 0:c.docs)==null?void 0:l.source}}};var d,x,u;t.parameters={...t.parameters,docs:{...(d=t.parameters)==null?void 0:d.docs,source:{originalSource:`{
+  parameters: {
+    ...setViewport('Desktop')
+  }
+}`,...(u=(x=t.parameters)==null?void 0:x.docs)==null?void 0:u.source}}};const P=["Mobile","Tablet","Desktop"];export{t as Desktop,a as Mobile,r as Tablet,P as __namedExportsOrder,L as default};
