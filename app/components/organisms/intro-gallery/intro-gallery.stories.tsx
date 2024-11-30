@@ -1,11 +1,11 @@
 import { type Meta, type StoryObj } from '@storybook/react'
 import { App } from '#app/components/templates'
 import { setViewport, setDesignPreview } from '#app/utils/storybook.ts'
-import { Gallery } from './gallery.tsx'
+import { IntroGallery } from './intro-gallery.tsx'
 
 const meta = {
 	title: 'Organisms/Gallery',
-	component: Gallery,
+	component: IntroGallery,
 	parameters: {
 		layout: 'fullscreen',
 		...setDesignPreview(
@@ -21,7 +21,7 @@ const meta = {
 			</App>
 		),
 	],
-} satisfies Meta<typeof Gallery>
+} satisfies Meta<typeof IntroGallery>
 
 export default meta
 type Story = StoryObj<typeof meta>

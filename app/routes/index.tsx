@@ -3,7 +3,7 @@ import {
 	Hero,
 	Activities,
 	Testimonials,
-	Gallery,
+	IntroGallery,
 	OurApproach,
 } from '#app/components/organisms'
 
@@ -16,7 +16,7 @@ export default function Index() {
 			<Activities />
 			<OurApproach />
 			<Testimonials />
-			<Gallery />
+			<IntroGallery />
 		</>
 	)
 }

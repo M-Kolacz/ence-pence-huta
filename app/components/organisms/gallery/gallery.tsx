@@ -1,56 +1,57 @@
-import { motion } from 'framer-motion'
-import { Button, Icon } from '#app/components/atoms'
-import { ImagesSlider } from '#app/components/molecules'
+import { useState } from 'react'
+import { ColumnsPhotoAlbum } from 'react-photo-album'
+import Lightbox from 'yet-another-react-lightbox'
+import Counter from 'yet-another-react-lightbox/plugins/counter'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
 import { Section } from '#app/components/templates'
+import { setGalleryColumns } from './galerry.helpers.ts'
+
+const breakpoints = [1024, 768]
+
+const images = [
+	{ height: 1536, width: 2048, src: '/img/nursery/1.jpg' },
+	{ height: 1536, width: 2048, src: '/img/nursery/2.jpg' },
+	{ height: 1599, width: 1200, src: '/img/nursery/3.jpg' },
+	{ height: 1536, width: 2048, src: '/img/nursery/4.jpg' },
+	{ height: 1599, width: 1200, src: '/img/nursery/5.jpg' },
+	{ height: 1599, width: 1200, src: '/img/nursery/6.jpg' },
+	{ height: 1599, width: 1200, src: '/img/nursery/7.jpg' },
+	{ height: 1536, width: 2048, src: '/img/nursery/8.jpg' },
+	{ height: 1536, width: 2048, src: '/img/nursery/9.jpg' },
+	{ height: 1599, width: 1200, src: '/img/nursery/10.jpg' },
+].map(({ src, width, height }) => ({
+	src: src,
+	width,
+	height,
+	srcSet: breakpoints.map((breakpoint) => ({
+		src: src,
+		width: breakpoint,
+		height: Math.round((height / width) * breakpoint),
+	})),
+}))
 
 export const Gallery = () => {
-	const images = [
-		'/img/nursery/1.jpg',
-		'/img/nursery/2.jpg',
-		'/img/nursery/3.jpg',
-		'/img/nursery/4.jpg',
-		'/img/nursery/5.jpg',
-		'/img/nursery/6.jpg',
-		'/img/nursery/7.jpg',
-		'/img/nursery/8.jpg',
-		'/img/nursery/9.jpg',
-		'/img/nursery/10.jpg',
-	]
+	const [photoIndex, setPhotoIndex] = useState(-1)
+	const gallery = 'gallery'
 
 	return (
-		<Section className="sm -mx-app h-[640px] md:h-[800px] lg:col-start-1 lg:col-end-13 lg:h-[900px]">
-			<ImagesSlider images={images}>
-				<motion.div
-					initial={{
-						opacity: 0,
-						y: -80,
-					}}
-					animate={{
-						opacity: 1,
-						y: 0,
-					}}
-					transition={{
-						duration: 0.6,
-					}}
-					className="z-50 flex flex-col items-center justify-center md:gap-base"
-				>
-					<div className="hidden flex-col items-center justify-center md:flex">
-						<motion.p className="w-fit rounded-t-lg bg-success-700 px-3 py-1 font-headings text-h3 text-neutral-white">
-							Sprawdź nasze zdjęcia
-						</motion.p>
-						<motion.p className="w-fit rounded-lg bg-success-700 px-3 py-1 font-headings text-h3 text-neutral-white">
-							i przekonaj się sam, jak wygląda nauka w
-						</motion.p>
-						<motion.p className="w-fit rounded-b-lg bg-success-700 px-3 py-1 font-headings text-h3 text-neutral-white">
-							naszym złobku.
-						</motion.p>
-					</div>
-					<Button variant="secondary" className="relative text-xl" size={'lg'}>
-						Zobacz naszą galerie
-						<Icon name="image" className="ml-2" />
-					</Button>
-				</motion.div>
-			</ImagesSlider>
+		<Section className="flex flex-col gap-strong" aria-labelledby={gallery}>
+			<h2 className="lg font-headings text-h2 text-text" id={gallery}>
+				Galeria
+			</h2>
+			<ColumnsPhotoAlbum
+				columns={setGalleryColumns}
+				photos={images}
+				onClick={({ index }) => setPhotoIndex(index)}
+			/>
+
+			<Lightbox
+				index={photoIndex}
+				slides={images}
+				open={photoIndex >= 0}
+				close={() => setPhotoIndex(-1)}
+				plugins={[Counter, Thumbnails]}
+			/>
 		</Section>
 	)
 }
