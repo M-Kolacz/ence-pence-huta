@@ -42,9 +42,8 @@ export async function action({ request }: ActionFunctionArgs) {
 					type: 'success',
 				}
 			: {
-					title: 'Błąd',
-					description:
-						'Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.',
+					title: 'Wystąpił błąd podczas wysyłania wiadomości.',
+					description: 'Spróbuj ponownie później.',
 					type: 'error',
 				},
 	)
