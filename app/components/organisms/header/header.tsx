@@ -18,11 +18,13 @@ export const Header = () => {
 
 	return (
 		<header className="col-span-full flex items-center justify-between">
-			<img
-				src={Logo}
-				alt="Ence Pence Nowa Huta"
-				className="md:h-[121px] md:w-[150px]"
-			/>
+			<Link to="/">
+				<img
+					src={Logo}
+					alt="Ence Pence Nowa Huta"
+					className="md:h-[121px] md:w-[150px]"
+				/>
+			</Link>
 			<Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
 				<DrawerTrigger asChild>
 					<Button
@@ -67,27 +69,22 @@ export const Header = () => {
 
 			<nav className="hidden md:block" aria-label="Nawigacja strony">
 				<ul className="list-none gap-subtle md:flex">
-					{navigationLinks
-						.filter((link) => link.to !== '/galeria')
-						.map((link) => {
-							if (link.to === '/kontakt')
-								return (
-									<li
-										key={link.to}
-										className="flex items-center justify-center"
-									>
-										<Button variant={'outline'} asChild>
-											<Link {...link} />
-										</Button>
-									</li>
-								)
-
+					{navigationLinks.map((link) => {
+						if (link.to === '/kontakt')
 							return (
 								<li key={link.to} className="flex items-center justify-center">
-									<NavigationLink {...link} className="text-xl font-bold" />
+									<Button variant={'outline'} asChild>
+										<Link {...link} />
+									</Button>
 								</li>
 							)
-						})}
+
+						return (
+							<li key={link.to} className="flex items-center justify-center">
+								<NavigationLink {...link} className="text-xl font-bold" />
+							</li>
+						)
+					})}
 				</ul>
 			</nav>
 		</header>

@@ -1,9 +1,11 @@
 import { Icon, Link } from '#app/components/atoms'
 import { Section } from '#app/components/templates'
 import invitationSrc from '#app/images/invitation.svg'
+import { getRegistrationYears } from '../registration/registration.helpers'
 
 export const Invitation = () => {
 	const contactTitle = 'invitation'
+	const { currentYear, nextYear } = getRegistrationYears()
 	return (
 		<Section
 			className="flex flex-col gap-strong md:flex-row"
@@ -14,7 +16,7 @@ export const Invitation = () => {
 					className="w-full max-w-prose font-headings text-h2 text-text"
 					id={contactTitle}
 				>
-					Zapisy na rok 2024/2025
+					Zapisy na rok {currentYear}/{nextYear}
 				</h2>
 				<div className="flex flex-col gap-subtle">
 					<p className="max-w-prose text-p1 text-text-subtle">
