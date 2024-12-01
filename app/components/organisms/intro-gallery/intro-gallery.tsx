@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Button, Icon } from '#app/components/atoms'
 import { ImagesSlider } from '#app/components/molecules'
 import { Section } from '#app/components/templates'
+import { Link } from '@remix-run/react'
 
 export const IntroGallery = () => {
 	const images = [
@@ -45,9 +46,16 @@ export const IntroGallery = () => {
 							naszym złobku.
 						</motion.p>
 					</div>
-					<Button variant="secondary" className="relative text-xl" size={'lg'}>
-						Zobacz naszą galerie
-						<Icon name="image" className="ml-2" />
+					<Button
+						variant="secondary"
+						className="relative text-xl"
+						size={'lg'}
+						asChild
+					>
+						<Link to="/galeria">
+							Zobacz naszą galerie
+							<Icon name="image" className="ml-2" />
+						</Link>
 					</Button>
 				</motion.div>
 			</ImagesSlider>
