@@ -11,6 +11,7 @@ import rateLimit from 'express-rate-limit'
 import getPort, { portNumbers } from 'get-port'
 import helmet from 'helmet'
 import morgan from 'morgan'
+import serverless from 'serverless-http'
 
 installGlobals()
 
@@ -23,13 +24,13 @@ const createRequestHandler = IS_PROD
 	? Sentry.wrapExpressCreateRequestHandler(_createRequestHandler)
 	: _createRequestHandler
 
-const viteDevServer = IS_PROD
-	? undefined
-	: await import('vite').then(vite =>
-			vite.createServer({
-				server: { middlewareMode: true },
-			}),
-		)
+// const viteDevServer = IS_PROD
+// 	? undefined
+// 	: await import('vite').then((vite) =>
+// 			vite.createServer({
+// 				server: { middlewareMode: true },
+// 			}),
+// 		)
 
 const app = express()
 
@@ -68,25 +69,21 @@ app.use(compression())
 // http://expressjs.com/en/advanced/best-practice-security.html#at-a-minimum-disable-x-powered-by-header
 app.disable('x-powered-by')
 
-if (viteDevServer) {
-	app.use(viteDevServer.middlewares)
-} else {
-	// Remix fingerprints its assets so we can cache forever.
-	app.use(
-		'/assets',
-		express.static('build/client/assets', { immutable: true, maxAge: '1y' }),
-	)
+// Remix fingerprints its assets so we can cache forever.
+app.use(
+	'/assets',
+	express.static('build/client/assets', { immutable: true, maxAge: '1y' }),
+)
 
-	app.use(
-		'/fonts',
-		// Can aggressively cache fonts as they don't change often
-		express.static('public/fonts', { immutable: true, maxAge: '1y' }),
-	)
+app.use(
+	'/fonts',
+	// Can aggressively cache fonts as they don't change often
+	express.static('public/fonts', { immutable: true, maxAge: '1y' }),
+)
 
-	// Everything else (like favicon.ico) is cached for an hour. You may want to be
-	// more aggressive with this caching.
-	app.use(express.static('build/client', { maxAge: '1h' }))
-}
+// Everything else (like favicon.ico) is cached for an hour. You may want to be
+// more aggressive with this caching.
+app.use(express.static('build/client', { maxAge: '1h' }))
 
 app.get(['/img/*', '/favicons/*'], (_req, res) => {
 	// if we made it past the express.static for these, then we're missing something.
@@ -94,7 +91,7 @@ app.get(['/img/*', '/favicons/*'], (_req, res) => {
 	return res.status(404).send('Not found')
 })
 
-morgan.token('url', req => decodeURIComponent(req.url ?? ''))
+morgan.token('url', (req) => decodeURIComponent(req.url ?? ''))
 app.use(
 	morgan('tiny', {
 		skip: (req, res) =>
@@ -184,7 +181,7 @@ app.use((req, res, next) => {
 		'/resources/verify',
 	]
 	if (req.method !== 'GET' && req.method !== 'HEAD') {
-		if (strongPaths.some(p => req.path.includes(p))) {
+		if (strongPaths.some((p) => req.path.includes(p))) {
 			return strongestRateLimit(req, res, next)
 		}
 		return strongRateLimit(req, res, next)
@@ -200,11 +197,7 @@ app.use((req, res, next) => {
 })
 
 async function getBuild() {
-	const build = viteDevServer
-		? viteDevServer.ssrLoadModule('virtual:remix/server-build')
-		: // @ts-ignore this should exist before running the server
-			// but it may not exist just yet.
-			await import('../build/server/index.js')
+	const build = require('../build/server/index.js')
 	// not sure how to make this happy 🤷‍♂️
 	return build as unknown as ServerBuild
 }
@@ -228,46 +221,48 @@ app.all(
 	}),
 )
 
-const desiredPort = Number(process.env.PORT || 3000)
-const portToUse = await getPort({
-	port: portNumbers(desiredPort, desiredPort + 100),
-})
-const portAvailable = desiredPort === portToUse
-if (!portAvailable && !IS_DEV) {
-	console.log(`⚠️ Port ${desiredPort} is not available.`)
-	process.exit(1)
-}
+export const handler = serverless(app)
 
-const server = app.listen(portToUse, () => {
-	if (!portAvailable) {
-		console.warn(
-			chalk.yellow(
-				`⚠️  Port ${desiredPort} is not available, using ${portToUse} instead.`,
-			),
-		)
-	}
-	console.log(`🚀  We have liftoff!`)
-	const localUrl = `http://localhost:${portToUse}`
-	let lanUrl: string | null = null
-	const localIp = ipAddress() ?? 'Unknown'
-	// Check if the address is a private ip
-	// https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces
-	// https://github.com/facebook/create-react-app/blob/d960b9e38c062584ff6cfb1a70e1512509a966e7/packages/react-dev-utils/WebpackDevServerUtils.js#LL48C9-L54C10
-	if (/^10[.]|^172[.](1[6-9]|2[0-9]|3[0-1])[.]|^192[.]168[.]/.test(localIp)) {
-		lanUrl = `http://${localIp}:${portToUse}`
-	}
+// const desiredPort = Number(process.env.PORT || 3000)
+// const portToUse = await getPort({
+// 	port: portNumbers(desiredPort, desiredPort + 100),
+// })
+// const portAvailable = desiredPort === portToUse
+// if (!portAvailable && !IS_DEV) {
+// 	console.log(`⚠️ Port ${desiredPort} is not available.`)
+// 	process.exit(1)
+// }
 
-	console.log(
-		`
-${chalk.bold('Local:')}            ${chalk.cyan(localUrl)}
-${lanUrl ? `${chalk.bold('On Your Network:')}  ${chalk.cyan(lanUrl)}` : ''}
-${chalk.bold('Press Ctrl+C to stop')}
-		`.trim(),
-	)
-})
+// const server = app.listen(portToUse, () => {
+// 	if (!portAvailable) {
+// 		console.warn(
+// 			chalk.yellow(
+// 				`⚠️  Port ${desiredPort} is not available, using ${portToUse} instead.`,
+// 			),
+// 		)
+// 	}
+// 	console.log(`🚀  We have liftoff!`)
+// 	const localUrl = `http://localhost:${portToUse}`
+// 	let lanUrl: string | null = null
+// 	const localIp = ipAddress() ?? 'Unknown'
+// 	// Check if the address is a private ip
+// 	// https://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces
+// 	// https://github.com/facebook/create-react-app/blob/d960b9e38c062584ff6cfb1a70e1512509a966e7/packages/react-dev-utils/WebpackDevServerUtils.js#LL48C9-L54C10
+// 	if (/^10[.]|^172[.](1[6-9]|2[0-9]|3[0-1])[.]|^192[.]168[.]/.test(localIp)) {
+// 		lanUrl = `http://${localIp}:${portToUse}`
+// 	}
 
-closeWithGrace(async () => {
-	await new Promise((resolve, reject) => {
-		server.close(e => (e ? reject(e) : resolve('ok')))
-	})
-})
+// 	console.log(
+// 		`
+// ${chalk.bold('Local:')}            ${chalk.cyan(localUrl)}
+// ${lanUrl ? `${chalk.bold('On Your Network:')}  ${chalk.cyan(lanUrl)}` : ''}
+// ${chalk.bold('Press Ctrl+C to stop')}
+// 		`.trim(),
+// 	)
+// })
+
+// closeWithGrace(async () => {
+// 	await new Promise((resolve, reject) => {
+// 		server.close((e) => (e ? reject(e) : resolve('ok')))
+// 	})
+// })

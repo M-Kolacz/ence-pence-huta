@@ -17,7 +17,7 @@ import { makeTimings } from './utils/timing.server.ts'
 
 const ABORT_DELAY = 5000
 
-init()
+// init()
 global.ENV = getEnv()
 
 if (ENV.MODE === 'production' && ENV.SENTRY_DSN) {
