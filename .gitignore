@@ -32,3 +32,5 @@ node_modules
 .env.sentry-build-plugin
 *storybook.log
 /storybook-static
+# Local Netlify folder
+.netlify
